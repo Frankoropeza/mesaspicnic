@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  images: Array<{ src: string; alt: string }>;
+  id?: string;
+}
+
+const { title, subtitle, images, id } = Astro.props;
+---
+
+<section class="section section-alt" id={id}>
+  <div class="container">
+    <h2 class="section-title">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+    <div class="gallery-section-grid">
+      {images.map((img) => (
+        <div class="gallery-section-item">
+          <img src={img.src} alt={img.alt} loading="lazy" width="560" height="315" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-section-item {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .gallery-section-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s var(--ease);
+  }
+
+  .gallery-section-item:hover img {
+    transform: scale(1.03);
+  }
+</style>

@@ -1,6 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const galeriaImages = [
+  { src: "/img/boda-hacienda-1.avif", alt: "Mesas de madera decoradas con flores y velas bajo un arco de hacienda al atardecer" },
+  { src: "/img/boda-boho-1.avif", alt: "Montaje boho con pampas y telas naturales sobre bancas rústicas en un jardín" },
+  { src: "/img/boda-multiples-1.avif", alt: "Vista aérea de varias mesas de madera alineadas en un jardín para banquete de boda" },
+  { src: "/img/boda-detalle-1.avif", alt: "Detalle de centro de mesa con rosas y eucalipto sobre tablón de pino natural" },
+  { src: "/img/bodas/mesa-picnic-boda-decoracion-eucalipto.webp", alt: "Mesa larga decorada con ramas de eucalipto y velas al centro" },
+  { src: "/img/bodas/mesa-picnic-boda-sunset-romantico.webp", alt: "Invitados cenando al atardecer en bancas de madera" },
+  { src: "/img/bodas/boda-picnic-mesa-decorada-rosas.webp", alt: "Centro de mesa con rosas blancas sobre tablón de pino" },
+  { src: "/img/bodas/mesa-picnic-boda-luces-decorativas.webp", alt: "Hilera de mesas iluminadas con series de luces cálidas en jardín nocturno" },
+  { src: "/img/bodas/renta-mesas-picnic-boda-romantica-luces.webp", alt: "Vista general del montaje con guirnaldas de luz sobre el área de banquete" },
+  { src: "/img/bodas/mesa-picnic-boda-intima-naturaleza.webp", alt: "Boda íntima de seis personas en una sola mesa rodeada de árboles" },
+];
 ---
 
 <BaseLayout
@@ -77,21 +91,12 @@ import Hero from '../../components/Hero.astro';
   </div>
 </section>
 
-<!-- Galería bodas -->
-<section class="section section-alt" id="galeria-bodas">
-  <div class="container">
-    <h2 class="section-title">Bodas Recientes</h2>
-    <p class="section-subtitle">Algunos montajes que hemos realizado en los últimos meses.</p>
-    <div class="gallery-grid">
-      <img src="/img/bodas/mesa-picnic-boda-decoracion-eucalipto.webp" alt="Mesa larga decorada con ramas de eucalipto y velas al centro" loading="lazy" width="400" height="300" />
-      <img src="/img/bodas/mesa-picnic-boda-sunset-romantico.webp" alt="Invitados cenando al atardecer en bancas de madera" loading="lazy" width="400" height="300" />
-      <img src="/img/bodas/boda-picnic-mesa-decorada-rosas.webp" alt="Detalle de centro de mesa con rosas blancas sobre tablón de pino" loading="lazy" width="400" height="300" />
-      <img src="/img/bodas/mesa-picnic-boda-luces-decorativas.webp" alt="Hilera de mesas iluminadas con series de luces cálidas en jardín nocturno" loading="lazy" width="400" height="300" />
-      <img src="/img/bodas/renta-mesas-picnic-boda-romantica-luces.webp" alt="Vista general del montaje con guirnaldas de luz sobre el área de banquete" loading="lazy" width="400" height="300" />
-      <img src="/img/bodas/mesa-picnic-boda-intima-naturaleza.webp" alt="Boda íntima de seis personas en una sola mesa rodeada de árboles" loading="lazy" width="400" height="300" />
-    </div>
-  </div>
-</section>
+<GallerySection
+  title="Bodas Recientes"
+  subtitle="Algunos montajes que hemos realizado en los últimos meses."
+  images={galeriaImages}
+  id="galeria-bodas"
+/>
 
 <!-- FAQ bodas -->
 <section class="section">
@@ -182,22 +187,6 @@ import Hero from '../../components/Hero.astro';
     width: 100%;
     height: auto;
   }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  .gallery-grid img {
-    border-radius: var(--radius-md);
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.5s var(--ease);
-  }
-
-  .gallery-grid img:hover { transform: scale(1.03); }
 
   .faq-list {
     max-width: 720px;

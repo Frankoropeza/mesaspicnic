@@ -3,6 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
+import GallerySection from '../components/GallerySection.astro';
+
+const galeriaImages = [
+  { src: "/img/boda-hacienda-1.avif", alt: "Mesas de madera decoradas con flores y velas bajo un arco de hacienda al atardecer" },
+  { src: "/img/boda-boho-1.avif", alt: "Montaje boho con pampas y telas naturales sobre bancas rústicas en un jardín" },
+  { src: "/img/corp-rooftop-1.avif", alt: "Evento corporativo en terraza con bancas de madera y vista panorámica de la ciudad" },
+  { src: "/img/corp-teambuilding-1.avif", alt: "Equipo de trabajo compartiendo actividad de integración en mesas de madera al aire libre" },
+  { src: "/img/infantil-cumple-1.avif", alt: "Niños soplando velas de pastel sentados en bancas de madera decoradas con globos" },
+  { src: "/img/infantil-teaparty-1.avif", alt: "Tea party infantil con vajilla miniatura y flores sobre banca rústica en jardín" },
+  { src: "/img/tema-mexicana-1.avif", alt: "Fiesta mexicana con papel picado, cempasúchil y cazuelas sobre mobiliario de madera" },
+  { src: "/img/tema-tropical-1.avif", alt: "Montaje tropical con hojas de palma, piñas y flores coloridas sobre bancas de madera" },
+];
 ---
 
 <BaseLayout
@@ -78,33 +90,12 @@ import TestimonialCard from '../components/TestimonialCard.astro';
   </div>
 </section>
 
-<!-- Galería -->
-<section class="section section-alt" id="galeria">
-  <div class="container">
-    <h2 class="section-title">Galería de Eventos</h2>
-    <p class="section-subtitle">Así luce nuestro mobiliario en eventos reales de nuestros clientes.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-tall">
-        <img src="/img/mesa-picnic-boda-novios-romantica.webp" alt="Banca de madera decorada con flores blancas en una boda al aire libre" loading="lazy" width="600" height="800" />
-      </div>
-      <div class="gallery-item">
-        <img src="/img/mesa-picnic-comida-corporativa-empresas.webp" alt="Grupo de personas comiendo en bancas de madera durante un evento corporativo" loading="lazy" width="600" height="400" />
-      </div>
-      <div class="gallery-item">
-        <img src="/img/mesa-picnic-infantil-colores-cumpleanos.webp" alt="Niños sentados en bancas de madera con globos de colores en un cumpleaños" loading="lazy" width="600" height="400" />
-      </div>
-      <div class="gallery-item gallery-tall">
-        <img src="/img/mesa-picnic-romantica-velas-rosas.webp" alt="Banca de madera con velas encendidas y rosas sobre mantel blanco" loading="lazy" width="600" height="800" />
-      </div>
-      <div class="gallery-item">
-        <img src="/img/mesa-picnic-feria-gastronomica-multitud.webp" alt="Varias bancas de madera ocupadas por visitantes en una feria de comida al aire libre" loading="lazy" width="600" height="400" />
-      </div>
-      <div class="gallery-item">
-        <img src="/img/mesa-picnic-reunion-familiar-comida.webp" alt="Familia compartiendo comida alrededor de una banca de madera en un jardín" loading="lazy" width="600" height="400" />
-      </div>
-    </div>
-  </div>
-</section>
+<GallerySection
+  title="Galería de Eventos"
+  subtitle="Así luce nuestro mobiliario en eventos reales de nuestros clientes."
+  images={galeriaImages}
+  id="galeria"
+/>
 
 <!-- Por qué elegirnos -->
 <section class="section" id="por-que">
@@ -291,34 +282,6 @@ import TestimonialCard from '../components/TestimonialCard.astro';
     gap: 1.5rem;
   }
 
-  /* Gallery masonry */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    grid-auto-rows: 220px;
-  }
-
-  .gallery-item {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s var(--ease);
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .gallery-tall {
-    grid-row: span 2;
-  }
-
   /* Features */
   .features-grid {
     display: grid;
@@ -445,14 +408,11 @@ import TestimonialCard from '../components/TestimonialCard.astro';
 
   @media (max-width: 768px) {
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .features-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 480px) {
     .services-grid { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-    .gallery-tall { grid-row: span 1; }
   }
 </style>

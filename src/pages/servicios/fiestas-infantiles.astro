@@ -1,6 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const galeriaImages = [
+  { src: "/img/infantil-cumple-1.avif", alt: "Niños soplando velas de pastel sentados en bancas de madera decoradas con globos" },
+  { src: "/img/infantil-arte-1.avif", alt: "Taller de arte infantil con pinturas y pinceles sobre mesa de madera al aire libre" },
+  { src: "/img/infantil-teaparty-1.avif", alt: "Tea party infantil con vajilla miniatura y flores sobre banca rústica en jardín" },
+  { src: "/img/mesa-picnic-infantil-colores-cumpleanos.webp", alt: "Banca decorada con mantel de colores y platos de cartón para cumpleaños" },
+  { src: "/img/mesa-picnic-fiesta-infantil-cupcakes.webp", alt: "Cupcakes y dulces organizados sobre superficie de madera natural" },
+  { src: "/img/mesa-picnic-infantil-colorida-24.webp", alt: "Tres bancas infantiles alineadas con globos y guirnaldas" },
+  { src: "/img/mesa-picnic-infantil-parque-regalos.webp", alt: "Niños abriendo regalos sentados en bancas de madera en un jardín" },
+  { src: "/img/mesa-picnic-fiesta-familiar-03.webp", alt: "Familia reunida alrededor de mobiliario de madera en evento al aire libre" },
+];
 ---
 
 <BaseLayout
@@ -72,20 +84,12 @@ import Hero from '../../components/Hero.astro';
   </div>
 </section>
 
-<section class="section section-alt" id="galeria-infantil">
-  <div class="container">
-    <h2 class="section-title">Galería Infantil</h2>
-    <p class="section-subtitle">Algunos montajes recientes en cumpleaños y baby showers.</p>
-    <div class="gallery-grid">
-      <img src="/img/mesa-picnic-infantil-colores-cumpleanos.webp" alt="Banca decorada con mantel de colores y platos de cartón para cumpleaños" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-fiesta-infantil-cupcakes.webp" alt="Cupcakes y dulces organizados sobre superficie de madera natural" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-infantil-colorida-24.webp" alt="Tres bancas infantiles alineadas con globos y guirnaldas" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-fiesta-infantil-mexicana.webp" alt="Montaje con temática mexicana, papel picado y flores sobre madera" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-infantil-parque-regalos.webp" alt="Niños abriendo regalos sentados en bancas de madera en un jardín" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-fiesta-familiar-03.webp" alt="Familia reunida alrededor de mobiliario de madera en evento al aire libre" loading="lazy" width="400" height="300" />
-    </div>
-  </div>
-</section>
+<GallerySection
+  title="Galería Infantil"
+  subtitle="Algunos montajes recientes en cumpleaños y baby showers."
+  images={galeriaImages}
+  id="galeria-infantil"
+/>
 
 <section class="section">
   <div class="container">
@@ -134,9 +138,6 @@ import Hero from '../../components/Hero.astro';
   .check-list li { padding-left: 1.75rem; position: relative; color: var(--c-text); line-height: 1.6; }
   .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--c-primary); font-weight: 700; }
   .content-image img { border-radius: var(--radius-md); width: 100%; height: auto; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .gallery-grid img { border-radius: var(--radius-md); width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s var(--ease); }
-  .gallery-grid img:hover { transform: scale(1.03); }
   .faq-list { max-width: 720px; margin: 1rem auto 0; display: flex; flex-direction: column; gap: 0.75rem; }
   .faq-item { background: #fff; border: 1px solid var(--c-border); border-radius: var(--radius-sm); overflow: hidden; }
   .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }

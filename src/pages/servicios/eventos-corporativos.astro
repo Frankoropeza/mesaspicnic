@@ -1,6 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const galeriaImages = [
+  { src: "/img/corp-rooftop-1.avif", alt: "Evento corporativo en terraza con bancas de madera y vista panorámica de la ciudad" },
+  { src: "/img/corp-teambuilding-1.avif", alt: "Equipo de trabajo compartiendo actividad de integración en mesas de madera al aire libre" },
+  { src: "/img/corp-almuerzo-1.avif", alt: "Almuerzo empresarial servido sobre mobiliario rústico en jardín corporativo" },
+  { src: "/img/mesa-picnic-conferencia-empresarial-plantas.webp", alt: "Conferencia empresarial al aire libre rodeada de plantas" },
+  { src: "/img/mesa-picnic-evento-empresarial-exterior.webp", alt: "Montaje de bancas de madera en exterior para evento de empresa" },
+  { src: "/img/mesa-picnic-evento-corporativo-04.webp", alt: "Vista general de un evento corporativo con mobiliario de madera" },
+  { src: "/img/mesa-picnic-evento-masivo-dia.webp", alt: "Evento masivo de día con decenas de bancas ocupadas por asistentes" },
+];
 ---
 
 <BaseLayout
@@ -72,20 +83,12 @@ import Hero from '../../components/Hero.astro';
   </div>
 </section>
 
-<section class="section section-alt" id="galeria-corporativo">
-  <div class="container">
-    <h2 class="section-title">Galería Corporativa</h2>
-    <p class="section-subtitle">Montajes reales que hemos realizado para empresas en la zona metropolitana.</p>
-    <div class="gallery-grid">
-      <img src="/img/mesa-picnic-conferencia-empresarial-plantas.webp" alt="Conferencia empresarial al aire libre rodeada de plantas" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-evento-empresarial-exterior.webp" alt="Montaje de bancas de madera en exterior para evento de empresa" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-conferencia-agua-libretas.webp" alt="Botellas de agua y libretas sobre superficie de madera durante conferencia" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-evento-corporativo-04.webp" alt="Vista general de un evento corporativo con mobiliario de madera" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-evento-corporativo-exterior.webp" alt="Filas de bancas acomodadas en jardín para actividad empresarial" loading="lazy" width="400" height="300" />
-      <img src="/img/mesa-picnic-evento-masivo-dia.webp" alt="Evento masivo de día con decenas de bancas ocupadas por asistentes" loading="lazy" width="400" height="300" />
-    </div>
-  </div>
-</section>
+<GallerySection
+  title="Galería Corporativa"
+  subtitle="Montajes reales que hemos realizado para empresas en la zona metropolitana."
+  images={galeriaImages}
+  id="galeria-corporativo"
+/>
 
 <section class="section">
   <div class="container">
@@ -135,9 +138,6 @@ import Hero from '../../components/Hero.astro';
   .check-list li { padding-left: 1.75rem; position: relative; color: var(--c-text); line-height: 1.6; }
   .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--c-primary); font-weight: 700; }
   .content-image img { border-radius: var(--radius-md); width: 100%; height: auto; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .gallery-grid img { border-radius: var(--radius-md); width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s var(--ease); }
-  .gallery-grid img:hover { transform: scale(1.03); }
   .faq-list { max-width: 720px; margin: 1rem auto 0; display: flex; flex-direction: column; gap: 0.75rem; }
   .faq-item { background: #fff; border: 1px solid var(--c-border); border-radius: var(--radius-sm); overflow: hidden; }
   .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
