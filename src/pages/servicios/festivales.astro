@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesas para Festivales, Ferias y Bazares en CDMX | MESPIC"
+  description="Bancas de madera en volumen para festivales, ferias y bazares. De 100 a 500+ personas. Flotilla propia y logística completa en CDMX."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Festivales y Ferias" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Eventos masivos"
+  title="Mobiliario en Volumen para Festivales y Ferias"
+  description="Cuando necesitas sentar a 200, 500 o 1,000 personas al mismo tiempo, el problema no es conseguir bancas — es la logística. Nosotros resolvemos las dos cosas."
+  ctaPrimary={{ label: "Ver paquete premium →", href: "/paquetes/premium/" }}
+  ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
+  seoParagraph1="Los festivales y ferias no funcionan con el mismo proveedor de mobiliario que una boda. Necesitas volumen — 30, 50, 100 bancas que lleguen al mismo tiempo, se monten en 2 horas y aguanten 12 horas de uso continuo con gente rotando, platos calientes, bebidas derramadas y sol directo. En MESPIC tenemos el inventario y la flotilla para eventos de ese tamaño."
+  seoParagraph2="Hemos montado ferias gastronómicas en Roma Norte, bazares de fin de semana en Coyoacán, festivales culturales en explanadas de alcaldías, eventos de cerveza artesanal en estacionamientos y mercados navideños en plazas comerciales. La madera de pino aguanta el trato pesado que un festival le da al mobiliario — y al final del día lo recogemos sin que el organizador mueva una pieza."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Escala que Otros Proveedores No Manejan"
+    paragraph1="La diferencia entre rentar bancas para una fiesta de 30 personas y para un festival de 500 no es solo la cantidad — es la logística. Camiones, tiempos de montaje, coordinación con otros proveedores y la capacidad de resolver imprevistos a esa escala."
+    paragraph2="Eso es lo que hacemos. Explora el equipo disponible en la barra lateral."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Festival gastronómico con 40 bancas de madera en explanada" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Bazar de fin de semana con stands y bancas de pino" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Festival de cerveza artesanal con mobiliario de madera" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Feria cultural con bancas en explanada de alcaldía" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Mercado navideño con bancas decoradas con series de luces" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Food trucks con zona de bancas para comer" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Festival de música con bancas en zona de alimentos" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Bazar gastronómico nocturno con iluminación sobre madera" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Evento masivo de día con 60+ bancas ocupadas" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar", description: "6-8 personas, la base", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "10-12, mesas comunitarias", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Mesa Premium", description: "Con sombrilla, sol directo", href: "/catalogo/mesa-picnic-premium/" },
+      { title: "Paquete Premium", description: "10 bancas + coordinador", href: "/paquetes/premium/" },
+    ]}
+    sidebarTitle="Mobiliario en volumen"
+  />
+</section>
+
+<section class="section section-alt" id="tipos">
+  <SectionHeader
+    tag="h2"
+    title="Tipos de Evento que Equipamos"
+    paragraph1="No es lo mismo un bazar artesanal de 20 stands que un festival de comida con 5,000 asistentes. La cantidad de bancas, la distribución y la logística cambian completamente. Conocemos las diferencias porque lo hacemos cada fin de semana."
+    paragraph2="Dinos el formato y la escala. Te regresamos un plan logístico con tiempos de montaje."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Ferias Gastronómicas" description="Zona de comensales para food courts y festivales de comida. Las bancas se distribuyen frente a los puestos para que la gente coma sin hacer fila parada. De 20 a 100 bancas según la afluencia esperada." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa para food courts" />
+      <ServiceCard title="Bazares y Mercados" description="Bancas como stands de exhibición para artesanos, emprendedores y vendedores. Cada banca es un puesto: el vendedor detrás, el cliente enfrente. También funcionan como zona de descanso entre stands." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa para bazares" />
+      <ServiceCard title="Festivales Culturales" description="Eventos de alcaldía, ferias del libro, festivales de cine al aire libre, conciertos con zona de alimentos. Bancas en explanadas, parques y plazas. Volumen alto, montaje rápido." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/paquetes/premium/" btnLabel="Paquete festival" />
+      <ServiceCard title="Eventos de Cerveza y Vino" description="Catas, festivales de cerveza artesanal y vendimias. Las bancas de madera son el mobiliario natural para este tipo de eventos: rústicas, resistentes y combinan con la estética craft." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-rustica/" btnLabel="Mesa rústica" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="logistica">
+  <SectionHeader
+    tag="h2"
+    title="La Logística que Necesita un Evento Masivo"
+    paragraph1="Un festival no se monta como una boda. Hay camiones de carga, coordinación con policía de tránsito, permisos de plaza, tiempos muertos entre montaje de escenario y apertura de puertas. Sabemos operar dentro de esas restricciones."
+    paragraph2="Si tu evento tiene producción profesional, nos integramos a tu timeline. Si es tu primer festival, te ayudamos a planificarlo."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Flotilla Propia" description="Camiones de 3.5 y 5 toneladas para mover 50-100 bancas en un solo viaje. No subcontratamos transporte — nuestros choferes conocen las rutas y los accesos de los venues más usados en CDMX." />
+      <FeatureCard title="Montaje en 2-3 Horas" description="Un equipo de 6 personas monta 50 bancas en 2 horas. Para 100+ bancas desplegamos 2 equipos en paralelo. Llegamos en la ventana de montaje que la producción nos asigne." />
+      <FeatureCard title="Resistencia de 12+ Horas" description="La madera tratada aguanta uso continuo todo el día: sol, lluvia ligera, derrames, peso de charolas y equipos. No se astilla, no se tambalea, no se mancha permanentemente." />
+      <FeatureCard title="Recolección Nocturna" description="Si tu festival termina a medianoche, recogemos a medianoche. Si termina a las 2 am, a las 2 am. Nuestro equipo de desmontaje trabaja en horario del evento, no en horario de oficina." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="numeros">
+  <SectionHeader
+    tag="h2"
+    title="Los Números que Necesitas"
+    paragraph1="Organizar un festival implica hacer cuentas rápidas: cuántas bancas, cuántos camiones, cuánto espacio. Aquí tienes las referencias que usamos internamente para cotizar."
+    paragraph2="Estos números son para zona de comensales sentados. Si las bancas son stands de venta, el cálculo cambia."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="200 Personas Sentadas" description="28-34 bancas estándar. 2 camiones de carga. Montaje: 2 horas con 1 equipo. Espacio mínimo: 250 m² con pasillos de circulación de 1.5 m." />
+      <FeatureCard title="500 Personas Sentadas" description="70-85 bancas estándar. 4 camiones. Montaje: 3 horas con 2 equipos. Espacio: 600+ m². Requiere reserva de 2 semanas y visita previa al venue." />
+      <FeatureCard title="1,000+ Personas" description="140+ bancas. Operación logística completa. Coordinación con producción del evento, policía y accesos. 3-4 semanas de anticipación. Cotización especial por volumen." />
+      <FeatureCard title="Bancas como Stands" description="1 banca por stand de venta. Festival de 30 stands = 30 bancas de exhibición + 15-20 para zona de comensales. Total: 45-50 bancas. Distribución diferente a zona de comida." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="donde">
+  <SectionHeader
+    tag="h2"
+    title="Donde Ya Hemos Montado"
+    paragraph1="No estamos adivinando cómo funciona un festival — lo hacemos regularmente en estos tipos de espacio. Conocemos los accesos, las restricciones y los tiempos de cada formato."
+    paragraph2="Si tu venue no está en la lista, mándanos la ubicación. Probablemente ya hemos entregado cerca."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Explanadas de Alcaldía" description="Coyoacán, Tlalpan, Benito Juárez, Miguel Hidalgo. Espacios públicos con permisos de gobierno. Conocemos los protocolos de acceso y montaje en espacios municipales." />
+      <FeatureCard title="Estacionamientos y Terrenos" description="Los espacios favoritos de los organizadores de ferias gastronómicas. Piso plano, acceso vehicular directo, sin restricciones de horario. Hemos montado en estacionamientos de Roma, Condesa y Narvarte." />
+      <FeatureCard title="Parques y Plazas" description="Chapultepec, Parque Lincoln, Plaza de la Constitución, parques delegacionales. Requiere permiso del gobierno. Nosotros nos adaptamos a los horarios de montaje que el permiso establezca." />
+      <FeatureCard title="Plazas Comerciales" description="Áreas exteriores de centros comerciales para bazares y mercados navideños. Coordinamos con administración de la plaza para horarios de carga y descarga." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas de Organizadores de Festivales"
+    paragraph1="Las dudas que recibimos de productores de eventos, coordinadores de ferias y organizadores que están armando su primer festival."
+    paragraph2="Si estás cotizando con varios proveedores, pídenos nuestra propuesta. Te la mandamos con desglose de logística incluido."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Cuántas bancas tienen disponibles?", answer: "Nuestro inventario cubre eventos de hasta 500 personas sentadas simultáneamente (70-85 bancas). Para eventos más grandes, coordinamos con anticipación para asegurar volumen. Reserva con 2-3 semanas para festivales de 200+ personas." },
+      { question: "¿Aguantan el uso rudo de un festival?", answer: "Sí. Madera de pino tratada que soporta 12+ horas de uso continuo, derrames, peso de charolas y sol directo. Después de cada evento las revisamos, lijamos si es necesario y barnizamos. Llegan impecables a cada evento." },
+      { question: "¿Pueden llegar a las 5 am para un montaje de madrugada?", answer: "Sí. Nos adaptamos al timeline de producción. Si la ventana de montaje es de 5 a 8 am antes de la apertura, ahí estamos. Coordinamos hora exacta de llegada con tu jefe de producción." },
+      { question: "¿Facturan para eventos de gobierno?", answer: "Sí. CFDI con los datos fiscales que necesites. Aceptamos orden de compra, transferencia y pago contra factura. Experiencia con licitaciones y contratos de gobierno municipal." },
+      { question: "¿Rentan por varios días?", answer: "Sí. Para festivales de 2-3 días, las bancas quedan en el venue toda la duración del evento. Cotizamos tarifa especial por día adicional. El montaje y desmontaje se hace solo una vez." },
+      { question: "¿Qué pasa si se daña una banca durante el festival?", answer: "El desgaste normal de uso está incluido. Si una banca se rompe por mal uso (subirse parado, volcar intencionalmente), se cobra el costo de reparación o reposición. En 5 años de festivales nos ha pasado 3 veces." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Organizando un festival?"
+  subtext="Cotiza en volumen. Logística completa incluida."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, necesito cotizar bancas en volumen para un festival."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, necesito cotizar bancas en volumen para un festival." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": "Renta de Mesas en Volumen para Festivales y Ferias",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera en volumen para festivales gastronómicos, bazares, ferias culturales y eventos masivos al aire libre en CDMX. Logística para 100 a 1000+ personas."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

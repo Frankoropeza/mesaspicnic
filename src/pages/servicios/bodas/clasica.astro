@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Boda Clásica con Mesas de Madera | MESPIC — CDMX"
+  description="Bancas de pino barnizado para bodas clásicas. Manteles de lino, vajilla de porcelana y decoración formal. Montaje en CDMX y Edomex."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Bodas", href: "/servicios/bodas/" },
+    { label: "Boda Clásica" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Estilo clásico"
+  title="Boda Clásica con Mobiliario de Madera"
+  description="Manteles de lino, vajilla de porcelana y centros de mesa con rosas sobre bancas de pino barnizado. La formalidad de un salón con la frescura de estar al aire libre."
+  ctaPrimary={{ label: "Ver mesa grande →", href: "/catalogo/mesa-picnic-grande/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="La boda clásica al aire libre combina lo mejor de dos mundos: la elegancia de un banquete formal con la experiencia de estar en un jardín o terraza. Las bancas de pino tienen una superficie lisa y barnizada que soporta manteles de lino, vajilla de porcelana, copas de cristal y candelabros sin problema."
+  seoParagraph2="Hemos montado bodas clásicas en haciendas de Edomex, jardines de Coyoacán, terrazas de Polanco y salones con área exterior en toda la Ciudad de México. El formato funciona para bodas de 50 hasta 300 invitados. La clave está en la distribución: pasillos amplios, mesa principal elevada y zonas de coctel separadas."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Elegancia sobre Madera Natural"
+    paragraph1="Montajes formales con bancas de pino barnizado. Manteles, vajilla y decoración clásica que demuestran que la madera al aire libre puede ser tan elegante como un salón."
+    paragraph2="Explora los modelos recomendados para tu boda clásica en la barra lateral."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Banca de pino con mantel de lino y vajilla de porcelana" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Centro de mesa con rosas blancas y candelabro de latón" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Montaje formal con copas de cristal al atardecer" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Vista general de boda clásica con 20 bancas en hacienda" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Mesa principal de novios con decoración floral abundante" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Bancas cubiertas con mantel largo para recepción nocturna" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Detalle de lugar con tarjeta de nombre y servilleta doblada" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Iluminación con candelabros sobre bancas de madera" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Pasillo entre bancas decorado con pétalos de rosa" },
+    ]}
+    recommended={[
+      { title: "Mesa Grande", description: "Mesa principal, 10-12 personas", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Mesa Estándar", description: "Invitados, 6-8 personas", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Set Completo", description: "Con decoración incluida", href: "/catalogo/set-picnic-completo/" },
+      { title: "Paquete Premium", description: "10 bancas, 60 personas", href: "/paquetes/premium/" },
+      { title: "Paquete Estándar", description: "6 bancas + sombrillas", href: "/paquetes/estandar/" },
+    ]}
+    sidebarTitle="Mobiliario para boda clásica"
+  />
+</section>
+
+<section class="section section-alt" id="elementos">
+  <SectionHeader
+    tag="h2"
+    title="Elementos de una Boda Clásica al Aire Libre"
+    paragraph1="El estilo clásico requiere atención al detalle en la mesa: cada lugar debe tener espacio para plato base, copas, cubiertos y tarjeta de nombre. Nuestras bancas lo permiten."
+    paragraph2="La diferencia con un salón es que aquí tienes luz natural, brisa y cielo — sin perder la formalidad."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Manteles y Servilletas" description="La superficie barnizada acepta manteles de lino, algodón o satín sin resbalar. Los tablones de 2.40 m permiten manteles largos con caída elegante a los lados." />
+      <FeatureCard title="Vajilla y Cristalería" description="Espacio suficiente para plato base, plato fuerte, copas de vino y agua, cubiertos completos y tarjeta de nombre. Sin que nadie quede apretado." />
+      <FeatureCard title="Centros de Mesa Formales" description="Arreglos florales altos o bajos, candelabros, portavelas de cristal. La madera los sostiene sin problema y el tono natural complementa cualquier paleta de color." />
+      <FeatureCard title="Iluminación Elegante" description="Candelabros de latón, velas pillar, series de luces cálidas o lámparas colgantes. La madera barnizada refleja la luz de las velas creando un ambiente cálido." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mobiliario">
+  <SectionHeader
+    tag="h2"
+    title="Mobiliario Recomendado"
+    paragraph1="Para bodas clásicas recomendamos la mesa grande como mesa principal de novios y las estándar para invitados. El paquete premium incluye coordinador de evento."
+    paragraph2="La superficie lisa del barnizado a tres manos es lo que hace posible montajes formales sobre madera."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Mesa Grande" description="Mesa principal de novios. 10-12 personas, 2.40 × 1.50 m. Espacio amplio para centros de mesa y vajilla formal completa." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Ficha técnica grande" />
+      <ServiceCard title="Mesa Estándar" description="Para invitados. 6-8 personas, 1.80 × 1.50 m. La base del montaje clásico. Acepta manteles largos con caída." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Ficha técnica estándar" />
+      <ServiceCard title="Mesa Premium" description="Con sombrilla incluida. Ideal para zona de coctel previo a la recepción. Protege del sol durante ceremonias de día." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-premium/" btnLabel="Ficha técnica premium" />
+      <ServiceCard title="Paquete Premium" description="10 bancas + sombrillas + decoración + iluminación + coordinador de evento. Todo resuelto para bodas de 60+ personas." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/paquetes/premium/" btnLabel="Paquete premium" />
+    </div>
+  </div>
+</section>
+
+<!-- Estilos relacionados -->
+<section class="section" id="relacionados">
+  <SectionHeader
+    tag="h2"
+    title="Otros Estilos de Boda"
+    paragraph1="Si el estilo clásico no es exactamente lo que buscas, explora las otras opciones que montamos. Todos usan el mismo mobiliario de pino natural con diferente ambientación."
+    paragraph2="La madera funciona como base neutra — puedes cambiar completamente el estilo solo con la decoración."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Boda Rústica" description="Madera al natural con flores silvestres, velas y caminos de yute. El estilo más popular para jardines y haciendas. Combina con iluminación cálida de serie de luces." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/rustica/" btnLabel="Boda rústica" />
+      <ServiceCard title="Boda Boho" description="Pampas, macramé y telas naturales sobre las bancas. Ideal para bosques, viñedos y espacios con vegetación. Las bancas de pino complementan la estética orgánica." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/boho/" btnLabel="Boda boho" />
+      <ServiceCard title="Boda Clásica" description="Manteles de lino, vajilla de porcelana y centros de mesa con rosas. La superficie lisa de la banca soporta montajes formales sin problema. Para 50 a 300 invitados." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/clasica/" btnLabel="Boda clásica" />
+      <ServiceCard title="Boda Íntima" description="Montaje para 10 a 30 personas con 2 a 5 bancas. Perfecto para ceremonias civiles en jardines privados, terrazas o restaurantes con área exterior." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/intima/" btnLabel="Boda íntima" />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre Bodas Clásicas"
+    paragraph1="Dudas de parejas que quieren un montaje formal sobre madera al aire libre."
+    paragraph2="Si necesitas asesoría sobre cómo combinar elegancia con mobiliario rústico, escríbenos."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿La madera se ve bien con manteles formales?", answer: "Sí. El barnizado a tres manos crea una superficie lisa donde los manteles se asientan sin resbalar. El tono del pino complementa manteles blancos, marfil, champagne y colores tierra." },
+      { question: "¿Cabe vajilla completa en cada lugar?", answer: "Sí. La mesa estándar de 1.80 m da espacio para 6 lugares con plato base, copas de vino y agua, cubiertos y tarjeta de nombre. La grande de 2.40 m acomoda 10 lugares formales." },
+      { question: "¿Pueden poner manteles largos con caída?", answer: "La banca tiene espacio para manteles con caída lateral de 30-40 cm a cada lado. Recomendamos manteles de 3 m de largo para la estándar y 3.5 m para la grande." },
+      { question: "¿Funciona para bodas de 200+ invitados?", answer: "Sí. Para 200 invitados necesitas 28-30 bancas estándar más 1-2 grandes como mesa principal. Hemos montado bodas clásicas de hasta 300 personas en haciendas." },
+      { question: "¿La madera resiste candelabros pesados?", answer: "Sí. El pino tratado soporta candelabros de hierro, latón y cristal sin problema. La superficie es estable — no se tambalea." },
+      { question: "¿Tienen experiencia con bodas formales?", answer: "Sí. Hemos montado bodas clásicas con coordinación de wedding planner, vajilla rentada y servicio de meseros. Coordinamos tiempos de montaje para que todo esté listo antes del coctel." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal headline="¿Planeando una boda clásica?" subtext="Cotiza tu mobiliario. Coordinamos con tu wedding planner." phone="55 3128 1706" whatsapp="5531281706" waMessage="Hola, quiero cotizar mesas de madera para una boda clásica." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5531281706" message="Hola, quiero cotizar mesas para una boda clásica." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": "Renta de Mesas para Bodas Clásicas",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera para bodas clásicas y formales al aire libre en CDMX y Edomex."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

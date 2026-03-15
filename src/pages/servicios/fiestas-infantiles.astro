@@ -1,159 +1,167 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
-import GallerySection from '../../components/GallerySection.astro';
-
-const galeriaImages = [
-  { src: "/img/infantil-cumple-1.avif", alt: "Niños soplando velas de pastel sentados en bancas de madera decoradas con globos" },
-  { src: "/img/infantil-arte-1.avif", alt: "Taller de arte infantil con pinturas y pinceles sobre mesa de madera al aire libre" },
-  { src: "/img/infantil-teaparty-1.avif", alt: "Tea party infantil con vajilla miniatura y flores sobre banca rústica en jardín" },
-  { src: "/img/mesa-picnic-infantil-colores-cumpleanos.webp", alt: "Banca decorada con mantel de colores y platos de cartón para cumpleaños" },
-  { src: "/img/mesa-picnic-fiesta-infantil-cupcakes.webp", alt: "Cupcakes y dulces organizados sobre superficie de madera natural" },
-  { src: "/img/mesa-picnic-infantil-colorida-24.webp", alt: "Tres bancas infantiles alineadas con globos y guirnaldas" },
-  { src: "/img/mesa-picnic-infantil-parque-regalos.webp", alt: "Niños abriendo regalos sentados en bancas de madera en un jardín" },
-  { src: "/img/mesa-picnic-fiesta-familiar-03.webp", alt: "Familia reunida alrededor de mobiliario de madera en evento al aire libre" },
-];
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
 ---
 
 <BaseLayout
-  title="Mobiliario Infantil de Madera para Fiestas | MESPIC CDMX"
-  description="Bancas y mesas picnic de madera natural para fiestas infantiles en la Ciudad de México y Edomex. Lijadas, sin bordes filosos, con entrega y montaje incluidos."
+  title="Mesas Picnic para Fiestas Infantiles en CDMX | MESPIC"
+  description="Bancas infantiles de madera para cumpleaños y baby showers. Lijadas sin astillas, altura adaptada para niños. Montaje en CDMX y Edomex."
 >
 
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Fiestas Infantiles" }
+  ]} />
+</Fragment>
+
 <Hero
-  title="Mobiliario Infantil para Fiestas y Cumpleaños"
-  description="Bancas de madera natural lijadas a mano, sin bordes filosos y con altura adaptada para niños de 2 a 10 años. Tú decoras, nosotros entregamos y montamos."
-  ctaPrimary={{ label: "Cotizar fiesta infantil →", href: "/cotizar/" }}
-  ctaSecondary={{ label: "Ver galería", href: "#galeria-infantil" }}
-  seoParagraph1="Llevamos más de 300 fiestas infantiles en CDMX y Estado de México. Cada banca pasa por un proceso de lijado triple y barnizado con productos no tóxicos, porque sabemos que los niños tocan, muerden y se recuestan sobre la madera. Las mesas picnic miden 1.80 m de largo y la versión infantil tiene una altura de asiento de 30 cm, ideal para niños de 2 a 10 años."
-  seoParagraph2="El mobiliario funciona para comer pastel, hacer manualidades, abrir regalos o pintar. Tú eliges la temática y nosotros nos encargamos de la logística completa: entrega puntual, montaje en menos de 15 minutos por mesa y recolección al día siguiente sin costo adicional."
+  badge="Servicio infantil"
+  title="Bancas de Madera para Fiestas Infantiles"
+  description="Modelo infantil con altura adaptada para niños de 3 a 10 años. Madera lijada a grano fino, sin astillas ni bordes filosos. Para cumpleaños, baby showers y reuniones familiares."
+  ctaPrimary={{ label: "Ver mesa infantil →", href: "/catalogo/mesa-picnic-infantil/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="Los niños pasan la fiesta entera sentados comiendo, pintando, jugando y abriendo regalos. Por eso nuestras bancas infantiles están lijadas a grano fino — sin astillas, sin bordes filosos, sin clavos expuestos. El modelo infantil mide 1.20 × 1.00 m con altura proporcionada para niños de 3 a 10 años. Caben 8 a 10 niños cómodamente."
+  seoParagraph2="Hemos montado más de 150 fiestas infantiles en jardines, parques, salones con terraza y patios residenciales en la Ciudad de México y Estado de México. También combinamos bancas infantiles con estándar para eventos donde hay niños y adultos — los papás comen en las grandes mientras los niños tienen su propia zona."
 />
 
-<section class="section">
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Así se Ve en Fiestas de Niños"
+    paragraph1="Cumpleaños, baby showers y reuniones familiares con bancas infantiles de madera. Jardines, parques y patios residenciales en CDMX y Edomex."
+    paragraph2="Explora los modelos recomendados en la barra lateral."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Bancas infantiles decoradas con globos para cumpleaños" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Niños comiendo pastel sentados en bancas de madera" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Taller de arte infantil sobre mesa de pino" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Baby shower al aire libre con bancas decoradas" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Zona infantil con bancas pequeñas y zona adultos con estándar" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Niños abriendo regalos en bancas de madera en jardín" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Fiesta temática infantil con decoración sobre madera" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Tea party infantil con vajilla miniatura" },
+      { src: "/img/mesa-picnic-fiesta-infantil-globos-colores.webp", alt: "Cumpleaños en parque con 4 bancas infantiles" },
+    ]}
+    recommended={[
+      { title: "Mesa Infantil", description: "8-10 niños, 1.20 × 1.00 m", href: "/catalogo/mesa-picnic-infantil/" },
+      { title: "Mesa Estándar", description: "6-8 adultos, zona papás", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Set Completo", description: "Con decoración incluida", href: "/catalogo/set-picnic-completo/" },
+      { title: "Paquete Básico", description: "4 bancas, 24 personas", href: "/paquetes/basico/" },
+    ]}
+    sidebarTitle="Mobiliario para fiestas infantiles"
+  />
+</section>
+
+<section class="section section-alt" id="tipos">
+  <SectionHeader
+    tag="h2"
+    title="Tipos de Fiesta Infantil"
+    paragraph1="Cada celebración tiene sus propias necesidades. No es lo mismo un cumpleaños de 15 niños en un jardín que un baby shower para 40 personas con zona de adultos y niños."
+    paragraph2="Dinos qué tipo de fiesta estás organizando y te recomendamos la configuración ideal."
+  />
   <div class="container">
-    <div class="content-split">
-      <div class="content-text">
-        <h2>Seguras para los más pequeños</h2>
-        <p>Cada pieza pasa por tres rondas de lijado y una capa de barniz a base de agua, libre de solventes tóxicos. Los tornillos quedan embutidos y cubiertos con tapón de madera. La estructura soporta hasta 250 kg distribuidos, así que los adultos también se pueden sentar sin problema.</p>
-        <ul class="check-list">
-          <li>Lijado triple y barniz no tóxico</li>
-          <li>Tornillos embutidos con tapón de madera</li>
-          <li>Altura de asiento de 30 cm para niños</li>
-          <li>Superficie sellada, se limpia con trapo húmedo</li>
-        </ul>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" alt="Banca de madera infantil decorada con globos de colores en un jardín" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <ServiceCard title="Cumpleaños Infantil" description="Bancas infantiles para la mesa del pastel, la comida y las actividades. De 8 a 30 niños. El formato más solicitado para patios y jardines residenciales." image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" href="/catalogo/mesa-picnic-infantil/" btnLabel="Mesa infantil" />
+      <ServiceCard title="Baby Shower" description="Combinación de bancas estándar para adultos y mesa de exhibición para regalos. La madera complementa decoraciones en tonos pastel, florales y naturales." image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa estándar" />
+      <ServiceCard title="Fiesta con Zona Mixta" description="Bancas infantiles para niños + estándar para papás en el mismo espacio. Cada grupo tiene su zona y su tamaño de mobiliario. Para reuniones familiares de 30-60 personas." image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" href="/paquetes/basico/" btnLabel="Paquete básico" />
+      <ServiceCard title="Taller o Actividad" description="Bancas como estaciones de actividad: pintura, manualidades, decoración de cupcakes. Cada banca agrupa 8-10 niños con espacio para materiales." image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" href="/catalogo/mesa-picnic-infantil/" btnLabel="Mesa para talleres" />
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section" id="incluye">
+  <SectionHeader
+    tag="h2"
+    title="Qué Incluye el Servicio Infantil"
+    paragraph1="El mismo servicio que para bodas y corporativos: entrega, montaje y recolección. La diferencia es que las bancas infantiles están especialmente preparadas para niños."
+    paragraph2="Todas las piezas se revisan antes de cada evento: sin astillas, sin clavos, sin bordes afilados."
+  />
   <div class="container">
-    <div class="content-split reverse">
-      <div class="content-text">
-        <h2>Se adapta a cualquier temática</h2>
-        <p>La madera clara funciona como base neutra: un mantel de dinosaurios, una guirnalda de unicornios o banderines de superhéroes cambian por completo el look. Nuestras clientas nos envían fotos de montajes que parecen de revista, usando solo tela y accesorios de papelería.</p>
-        <p>Las bancas tienen un largo de 1.80 m, suficiente para sentar a 6 niños cómodamente o a 4 adultos. Si necesitas más capacidad, combinamos varias piezas en fila para crear una sola mesa larga estilo banquete.</p>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-infantil-colores-fiesta.webp" alt="Niños sentados en bancas de madera decoradas con temática de colores" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <FeatureCard title="Madera Lijada a Grano Fino" description="Cada pieza se lija antes del evento para eliminar cualquier aspereza. Los niños pueden tocar, sentarse y jugar sin riesgo de astillas." />
+      <FeatureCard title="Altura Adaptada" description="El modelo infantil tiene asiento a 30 cm del piso y mesa a 50 cm. Proporcionado para niños de 3 a 10 años. Los pies tocan el suelo." />
+      <FeatureCard title="Sin Bordes Filosos" description="Las esquinas están redondeadas y los cantos lijados. No hay clavos ni tornillos expuestos. Seguridad revisada pieza por pieza." />
+      <FeatureCard title="Fácil de Limpiar" description="La superficie barnizada se limpia con un trapo húmedo. Resiste derrames de jugo, migajas de pastel y pintura de manualidades." />
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-alt" id="datos">
+  <SectionHeader
+    tag="h2"
+    title="Referencia de Cantidad"
+    paragraph1="Estas son las combinaciones más comunes para fiestas infantiles. La cantidad final depende de si hay zona mixta (niños + adultos) o solo niños."
+    paragraph2="Mándanos el número de niños y adultos y te calculamos la configuración exacta."
+  />
   <div class="container">
-    <div class="content-split">
-      <div class="content-text">
-        <h2>Cumpleaños al aire libre</h2>
-        <p>Hemos montado mobiliario infantil en parques como La Mexicana, Chapultepec, jardines privados en Satélite y patios en Coyoacán. El equipo llega 1 hora antes del evento, acomoda las piezas donde tú indiques y las nivela aunque el terreno sea pasto o tierra.</p>
-        <ul class="check-list">
-          <li>Montaje sobre pasto, tierra o piso firme</li>
-          <li>Niveladores ajustables en cada pata</li>
-          <li>Entrega desde 1 hasta 20 unidades por evento</li>
-          <li>Recolección al día siguiente incluida</li>
-        </ul>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-fiesta-infantil-parque.webp" alt="Montaje de bancas de madera para cumpleaños infantil en un parque con pasto" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <FeatureCard title="10 Niños" description="1-2 bancas infantiles. Cumpleaños pequeño en patio o jardín. Si hay 10 adultos, agrega 2 bancas estándar." />
+      <FeatureCard title="20 Niños" description="2-3 bancas infantiles. Cumpleaños mediano. Con 20 adultos: agrega 3 bancas estándar. Total: 5-6 bancas." />
+      <FeatureCard title="30 Niños + Adultos" description="3-4 infantiles + 4-5 estándar. Fiesta familiar completa. Espacio recomendado: 80+ m²." />
+      <FeatureCard title="Baby Shower 40 Personas" description="5-6 bancas estándar + 1 grande como mesa de regalos. Sin bancas infantiles (los niños van con los papás)." />
     </div>
   </div>
 </section>
 
-<GallerySection
-  title="Galería Infantil"
-  subtitle="Algunos montajes recientes en cumpleaños y baby showers."
-  images={galeriaImages}
-  id="galeria-infantil"
+<section class="section" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre Fiestas Infantiles"
+    paragraph1="Las dudas más comunes de papás y mamás que organizan cumpleaños y fiestas de niños."
+    paragraph2="Si tienes una duda específica, escríbenos por WhatsApp."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Las bancas son seguras para niños pequeños?", answer: "Sí. Todas las piezas se lijan a grano fino antes de cada evento. Sin astillas, sin clavos expuestos, sin bordes filosos. Las esquinas están redondeadas." },
+      { question: "¿Qué edad es la adecuada para la mesa infantil?", answer: "De 3 a 10 años. El asiento está a 30 cm del piso y la mesa a 50 cm. Para niños menores de 3 años recomendamos sillas altas propias." },
+      { question: "¿Puedo combinar infantiles con estándar?", answer: "Sí, es lo más común. Zona infantil con bancas pequeñas y zona de papás con estándar. Así cada grupo tiene su tamaño de mobiliario." },
+      { question: "¿Resisten pintura y derrames?", answer: "Sí. La superficie barnizada se limpia con trapo húmedo. Resiste jugo, migajas, pintura lavable y pegamento. No se mancha la madera." },
+      { question: "¿Cuántas bancas infantiles para 15 niños?", answer: "2 bancas infantiles (8-10 niños cada una). Si quieres más espacio, 3 bancas para que no estén apretados." },
+      { question: "¿Entregan en salones de fiestas?", answer: "Sí, si el salón tiene área exterior o patio. También montamos en jardines residenciales, parques (con permiso) y terrazas." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Organizando una fiesta infantil?"
+  subtext="Cotiza bancas infantiles y estándar. Te respondemos hoy."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar mesas para una fiesta infantil."
+  cotizarHref="/cotizar/"
 />
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Preguntas sobre Fiestas Infantiles</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary class="faq-question">¿El mobiliario es seguro para niños pequeños?</summary>
-        <div class="faq-answer"><p>Sí. Cada pieza pasa por lijado triple, barnizado no tóxico y revisión de tornillos embutidos antes de salir del taller. Hemos atendido fiestas con niños desde 2 años sin ningún incidente.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">¿Tienen tamaño infantil?</summary>
-        <div class="faq-answer"><p>Sí. La versión infantil tiene asiento a 30 cm del piso y superficie a 50 cm, pensada para niños de 2 a 10 años. También manejamos el tamaño estándar (asiento a 45 cm) para adultos o adolescentes.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">¿Puedo contratar el servicio para un parque público?</summary>
-        <div class="faq-answer"><p>Claro. Hemos montado en La Mexicana, Chapultepec, Parque Lincoln y decenas de jardines privados. Solo necesitas el permiso del parque; nosotros llevamos, armamos y recogemos al día siguiente.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">¿Qué pasa si un niño derrama algo?</summary>
-        <div class="faq-answer"><p>La superficie está sellada con barniz a base de agua, así que los líquidos no penetran la madera. Basta con pasar un trapo húmedo. No cobramos por manchas ni derrames normales de una fiesta.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
+<WaBubble whatsapp="5531281706" message="Hola, quiero cotizar mesas para una fiesta infantil." />
 
-<section class="cta-final">
-  <div class="container cta-final-inner">
-    <h2 class="cta-final-title">¿Planeando una fiesta infantil?</h2>
-    <p class="cta-final-desc">Reserva tu mobiliario infantil y despreocúpate de la logística.</p>
-    <a href="https://wa.me/5215512345678?text=Hola%2C%20me%20interesa%20cotizar%20mobiliario%20infantil%20para%20una%20fiesta" class="btn btn-wa" target="_blank" rel="noopener">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Cotizar fiesta infantil
-    </a>
-  </div>
-</section>
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": "Renta de Mesas Picnic para Fiestas Infantiles",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera infantiles para cumpleaños y fiestas de niños en CDMX. Lijadas sin astillas, altura adaptada."
+  })} />
+</Fragment>
 
 </BaseLayout>
 
 <style>
-  .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-  .content-split.reverse .content-text { order: 2; }
-  .content-split.reverse .content-image { order: 1; }
-  .content-text h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--c-primary); margin-bottom: 1rem; }
-  .content-text p { color: var(--c-text-muted); line-height: 1.7; margin-bottom: 1rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
-  .check-list li { padding-left: 1.75rem; position: relative; color: var(--c-text); line-height: 1.6; }
-  .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--c-primary); font-weight: 700; }
-  .content-image img { border-radius: var(--radius-md); width: 100%; height: auto; }
-  .faq-list { max-width: 720px; margin: 1rem auto 0; display: flex; flex-direction: column; gap: 0.75rem; }
-  .faq-item { background: #fff; border: 1px solid var(--c-border); border-radius: var(--radius-sm); overflow: hidden; }
-  .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  .faq-question::-webkit-details-marker { display: none; }
-  .faq-question::after { content: '+'; font-size: 1.25rem; font-weight: 300; color: var(--c-accent); flex-shrink: 0; margin-left: 1rem; }
-  .faq-item[open] .faq-question::after { content: '−'; }
-  .faq-item[open] .faq-question { background: var(--c-bg-alt); }
-  .faq-answer { padding: 0 1.5rem 1.25rem; color: var(--c-text-muted); line-height: 1.7; }
-  .cta-final { background: var(--c-primary); padding: 5rem 0; }
-  .cta-final-inner { text-align: center; }
-  .cta-final-title { color: #fff; font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
-  .cta-final-desc { color: rgba(255,255,255,0.8); font-size: 1.125rem; margin-bottom: 2rem; }
-  @media (max-width: 768px) {
-    .content-split { grid-template-columns: 1fr; gap: 2rem; }
-    .content-split.reverse .content-text, .content-split.reverse .content-image { order: unset; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
 </style>

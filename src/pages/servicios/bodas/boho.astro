@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Boda Boho con Mesas de Madera Natural | MESPIC — CDMX"
+  description="Renta de bancas de pino para bodas boho en bosques, viñedos y jardines. Combina con pampas, macramé y telas naturales. Entrega y montaje en CDMX y Edomex."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Bodas", href: "/servicios/bodas/" },
+    { label: "Boda Boho" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Estilo boho"
+  title="Boda Boho con Mobiliario de Madera Natural"
+  description="Pampas, macramé y telas orgánicas sobre bancas de pino sin pintar. El estilo que mejor funciona en bosques, viñedos y espacios con vegetación abundante."
+  ctaPrimary={{ label: "Ver mesa estándar →", href: "/catalogo/mesa-picnic-estandar/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="La boda boho es el segundo estilo más solicitado en MESPIC después del rústico. La diferencia está en los textiles: donde el rústico usa yute y flores silvestres, el boho lleva pampas secas, macramé tejido a mano, cojines de algodón y telas caídas en tonos crema y terracota. La madera de pino al natural complementa esa estética orgánica sin competir."
+  seoParagraph2="Este estilo funciona mejor en espacios con vegetación natural: bosques de Edomex, viñedos en Tepotzotlán, jardines con árboles maduros en Coyoacán y Tlalpan, o incluso playas para bodas destino. Hemos montado bodas boho desde 15 hasta 200 invitados con configuraciones que incluyen arcos de pampas sobre las bancas."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Así se Ve una Boda Boho"
+    paragraph1="Montajes con bancas de pino natural combinadas con pampas, macramé, telas orgánicas y vegetación. Espacios al aire libre en la Ciudad de México y Estado de México."
+    paragraph2="Explora los modelos recomendados en la barra lateral para armar tu configuración."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Bancas de pino con pampas secas y macramé para boda boho" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Montaje boho con telas caídas entre árboles" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Mesa decorada con cojines de algodón y flores secas" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Boda boho en viñedo con bancas de madera" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Detalle de macramé sobre respaldo de banca" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Vista general de boda boho en bosque" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Arco de pampas sobre mesa principal de novios" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Bancas con cojines terracota y crema" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Montaje nocturno boho con velas y telas" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar", description: "Versátil, 6-8 personas", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Rústica", description: "Acabado campestre, 8 personas", href: "/catalogo/mesa-picnic-rustica/" },
+      { title: "Mesa Grande", description: "Mesa principal, 10-12 personas", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Set Completo", description: "Con decoración incluida", href: "/catalogo/set-picnic-completo/" },
+      { title: "Paquete Básico", description: "4 bancas, 24 personas", href: "/paquetes/basico/" },
+    ]}
+    sidebarTitle="Mobiliario para boda boho"
+  />
+</section>
+
+<section class="section section-alt" id="elementos">
+  <SectionHeader
+    tag="h2"
+    title="Elementos Clave del Estilo Boho"
+    paragraph1="El boho se distingue del rústico por los textiles y las texturas. No es solo madera — es la combinación de materiales orgánicos que crean un ambiente que se siente libre y natural."
+    paragraph2="Estos son los elementos que hemos visto funcionar en las bodas boho que montamos."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Pampas y Flores Secas" description="Ramos de pampas como centros de mesa o en arcos sobre las bancas. Flores secas en tonos neutros: crema, arena, terracota. Sin arreglos formales de florería." />
+      <FeatureCard title="Macramé Tejido" description="Caminos de macramé sobre la mesa, colgantes en arcos o respaldos. El tejido artesanal contrasta con la textura de la madera y aporta un toque handmade." />
+      <FeatureCard title="Telas Orgánicas" description="Muselina, gasa o algodón crudo caído desde las ramas o cruzando entre bancas. Colores: blanco roto, crema, arena, terracota suave. Nada brillante." />
+      <FeatureCard title="Cojines y Textiles" description="Cojines de algodón o lino sobre las bancas para mayor comodidad y estética. Tonos tierra que complementan la madera sin taparla." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="venues">
+  <SectionHeader
+    tag="h2"
+    title="Venues Ideales para Boda Boho"
+    paragraph1="El boho necesita un espacio que ya tenga naturaleza — el venue hace la mitad del trabajo. Estos son los tipos de espacio donde hemos tenido los mejores resultados."
+    paragraph2="Si ya tienes tu venue, mándanos fotos por WhatsApp y te decimos cómo distribuir las bancas."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Bosques y Arboledas" description="Árboles maduros como marco natural. La sombra, la luz filtrada y el piso de hojas complementan la madera sin necesidad de decoración extra. Bosques del Edomex y Desierto de los Leones." />
+      <FeatureCard title="Viñedos" description="Hileras de vid como pasillo entre las bancas. Viñedos en Tepotzotlán y Querétaro son los más solicitados para bodas boho." />
+      <FeatureCard title="Jardines con Vegetación" description="Jardines privados con bugambilias, palmas o jacarandas en Coyoacán, Tlalpan y San Ángel. La vegetación existente reduce costos de decoración." />
+      <FeatureCard title="Playas (Boda Destino)" description="Bancas sobre arena para ceremonias de sunset. Funciona en playas de Oaxaca, Riviera Maya y Nayarit. Consultar disponibilidad y costo de traslado." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="mobiliario">
+  <SectionHeader
+    tag="h2"
+    title="Mobiliario Recomendado"
+    paragraph1="Para una boda boho recomendamos combinar bancas estándar con la mesa grande como mesa principal. El set completo es ideal si no quieres coordinar decoración por separado."
+    paragraph2="Todos los modelos tienen el mismo acabado de pino natural que combina con el estilo boho."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Mesa Estándar" description="La más versátil. 6-8 personas, 1.80 × 1.50 m. Funciona para el banquete y las mesas de invitados. La base del montaje boho." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Ficha técnica estándar" />
+      <ServiceCard title="Mesa Rústica" description="Acabado campestre que complementa el boho. 8 personas. La madera tiene más vetas y nudos visibles — perfecto para el look orgánico." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-rustica/" btnLabel="Ficha técnica rústica" />
+      <ServiceCard title="Mesa Grande" description="Para la mesa principal de los novios. 10-12 personas, 2.40 × 1.50 m. Espacio amplio para el arco de pampas y los centros de mesa." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Ficha técnica grande" />
+      <ServiceCard title="Set Completo" description="Mesa + decoración básica + menaje incluido. Ahorra tiempo si no quieres coordinar decoración por separado. Incluye ambientación boho." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/set-picnic-completo/" btnLabel="Ficha técnica set" />
+    </div>
+  </div>
+</section>
+
+<!-- Estilos relacionados -->
+<section class="section" id="relacionados">
+  <SectionHeader
+    tag="h2"
+    title="Otros Estilos de Boda"
+    paragraph1="Si el boho no es exactamente lo que buscas, explora los otros estilos que montamos. Todos usan el mismo mobiliario de pino natural con diferente decoración."
+    paragraph2="También puedes combinar estilos: una ceremonia boho y una recepción rústica sobre las mismas bancas."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Boda Rústica" description="Madera al natural con flores silvestres, velas y caminos de yute. El estilo más popular para jardines y haciendas. Combina con iluminación cálida de serie de luces." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/rustica/" btnLabel="Boda rústica" />
+      <ServiceCard title="Boda Boho" description="Pampas, macramé y telas naturales sobre las bancas. Ideal para bosques, viñedos y espacios con vegetación. Las bancas de pino complementan la estética orgánica." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/boho/" btnLabel="Boda boho" />
+      <ServiceCard title="Boda Clásica" description="Manteles de lino, vajilla de porcelana y centros de mesa con rosas. La superficie lisa de la banca soporta montajes formales sin problema. Para 50 a 300 invitados." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/clasica/" btnLabel="Boda clásica" />
+      <ServiceCard title="Boda Íntima" description="Montaje para 10 a 30 personas con 2 a 5 bancas. Perfecto para ceremonias civiles en jardines privados, terrazas o restaurantes con área exterior." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/intima/" btnLabel="Boda íntima" />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre Bodas Boho"
+    paragraph1="Dudas específicas de parejas que quieren una boda con estilo boho o bohemio."
+    paragraph2="Si necesitas asesoría sobre cómo lograr el estilo boho en tu venue, escríbenos."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Cuál es la diferencia entre boho y rústico?", answer: "El rústico usa flores silvestres, yute y velas. El boho agrega pampas secas, macramé, telas orgánicas y cojines. La madera es la misma — lo que cambia es la decoración." },
+      { question: "¿Incluyen la decoración boho?", answer: "El mobiliario se entrega limpio y listo. La decoración boho la coordinas con tu decoradora. Si prefieres todo incluido, el Set Completo trae ambientación básica." },
+      { question: "¿Funcionan en bosques con piso irregular?", answer: "Sí. Las bancas son estables en pasto, tierra y hojas. Si el terreno es muy irregular, nivelamos con cuñas de madera que traemos incluidas." },
+      { question: "¿Pueden montar en un viñedo?", answer: "Sí, hemos montado en viñedos de Tepotzotlán y Querétaro. Solo necesitamos acceso vehicular para la entrega. Confirma disponibilidad con anticipación." },
+      { question: "¿Cuántas bancas para una boda boho de 100 personas?", answer: "14-16 bancas estándar. El boho suele usar distribuciones más abiertas que el clásico, así que a veces se necesitan 1-2 bancas extra para mantener el espacio entre mesas." },
+      { question: "¿La madera se mancha con las flores secas?", answer: "No. El barniz protege la superficie. Las pampas y flores secas no sueltan color ni humedad sobre la madera." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Planeando una boda boho?"
+  subtext="Cotiza tu mobiliario de madera. Te asesoramos con el montaje."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar mesas de madera para una boda boho."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, quiero cotizar mesas para una boda boho." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Renta de Mesas para Bodas Boho",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera de pino para bodas boho al aire libre en CDMX y Edomex."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

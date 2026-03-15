@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesas para Reuniones Familiares al Aire Libre | MESPIC — CDMX"
+  description="Bancas de madera para reuniones familiares: cumpleaños, Día de las Madres y posadas. Donde caben abuelos, papás y nietos juntos."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Reuniones Familiares" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Para familias"
+  title="Bancas de Madera donde Cabe Toda la Familia"
+  description="Hay mesas de restaurante donde alguien siempre queda en la esquina. En una banca de 2.40 metros, los abuelos, los papás, los primos y los niños comen juntos sin que nadie sobre."
+  ctaPrimary={{ label: "Ver mesa grande →", href: "/catalogo/mesa-picnic-grande/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="Las reuniones familiares tienen algo que los eventos corporativos y las bodas no: nadie quiere estar sentado lejos de los demás. Una banca de madera de 2.40 metros sienta a 10 personas cara a cara. Los abuelos platican con los nietos, los primos se pasan los platos sin levantarse, y nadie necesita gritar de un extremo al otro de la mesa. Esa es la diferencia entre un comedor extensible y una banca al aire libre."
+  seoParagraph2="Montamos reuniones familiares en patios, jardines residenciales, parques con permiso, terrazas de casa y hasta en estacionamientos que se convierten en comedor para la posada de diciembre. No hace falta un venue — tu espacio funciona. Cubrimos toda la Ciudad de México y municipios del Estado de México como Naucalpan, Satélite, Tlalnepantla y Coacalco."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Reuniones que se Sienten como Antes"
+    paragraph1="Cuando éramos niños, las reuniones familiares eran en el patio de los abuelos con una mesa larga donde cabían todos. Eso se perdió con los comedores de departamento. Las bancas lo devuelven."
+    paragraph2="Montajes para 10 hasta 80 personas en espacios familiares. Explora el mobiliario en la barra lateral."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Familia completa comiendo al aire libre en bancas de madera" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Abuelos y nietos en banca grande para Día de las Madres" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Posada familiar en patio con 6 bancas decoradas" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Cumpleaños de adulto al aire libre con pastel sobre madera" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Reunión dominical con tacos y cerveza sobre bancas de pino" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Niños jugando entre las bancas después de comer" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Familia grande de 40 personas en 6 bancas en jardín" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Aniversario de bodas de oro en banca decorada con flores" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Desayuno familiar del domingo en terraza con bancas" },
+    ]}
+    recommended={[
+      { title: "Mesa Grande", description: "10-12 personas, toda la familia junta", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Mesa Estándar", description: "6-8 personas por banca", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Infantil", description: "Mesa de niños separada", href: "/catalogo/mesa-picnic-infantil/" },
+      { title: "Paquete Básico", description: "4 bancas, 24 personas", href: "/paquetes/basico/" },
+      { title: "Paquete Estándar", description: "6 bancas, 36 personas", href: "/paquetes/estandar/" },
+    ]}
+    sidebarTitle="Mobiliario para familias"
+  />
+</section>
+
+<section class="section section-alt" id="ocasiones">
+  <SectionHeader
+    tag="h2"
+    title="Cada Familia Tiene sus Fechas"
+    paragraph1="No necesitas un motivo elaborado para juntar a la familia. Pero cuando lo hay, el mobiliario de madera al aire libre convierte un patio normal en algo que se siente especial — sin la producción de un salón de fiestas."
+    paragraph2="Estas son las ocasiones más comunes. Y sí, también vale el clásico 'es que mi mamá quiere hacer una comida'."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Cumpleaños de Adulto" description="Los 30, 40, 50 o 60 del papá, la mamá o los abuelos. 20-50 personas con comida casera, pastel y brindis. Las bancas de madera le dan otro nivel al patio de siempre." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa estándar" />
+      <ServiceCard title="Día de las Madres" description="La comida del 10 de mayo con toda la familia. Cada banca grande sienta a una rama de la familia: abuelos con sus hijos y nietos. Si la familia es grande, 4-6 bancas resuelven todo." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa grande" />
+      <ServiceCard title="Posada Familiar" description="Diciembre con tamales, ponche, piñata y villancicos. Las bancas en el patio con series de luces se sienten como las posadas de antes. Reserva en octubre — diciembre se satura rápido." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/paquetes/estandar/" btnLabel="Paquete estándar" />
+      <ServiceCard title="Domingos y Fin de Semana" description="No hay fecha especial — solo la familia que quiere comer junta. Tacos, carne asada, arroz y frijoles sobre madera de pino en el jardín. Así de simple y así de bueno." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/paquetes/basico/" btnLabel="Paquete básico" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="por-que">
+  <SectionHeader
+    tag="h2"
+    title="Por Qué la Banca Funciona Mejor que el Comedor"
+    paragraph1="Un comedor extensible sienta a 8. Una banca grande sienta a 12. Dos bancas sientan a 20. No hay comedor de casa que compita con eso — y el patio tiene más aire que el comedor."
+    paragraph2="La banca no es elegante ni pretenciosa. Es práctica, resistente y cómoda. Exactamente lo que necesita una reunión familiar."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Todos en una Mesa" description="La banca grande de 2.40 m sienta a 10-12 personas cara a cara. Los abuelos, los papás, los hijos y los primos. Sin mesas separadas, sin que alguien coma en el sillón." />
+      <FeatureCard title="Los Niños Tienen su Espacio" description="Banca infantil separada para los niños. Comen, juegan y se ensucian en su propia mesa — sin estorbar a los adultos y sin que los adultos estén cuidando que no tiren algo." />
+      <FeatureCard title="Aguanta Comida Real" description="Cazuelas de mole, ollas de tamales, charolas de carnitas, cubetas de cerveza con hielo. La madera tratada soporta el peso y el calor. No se mancha, no se tambalea." />
+      <FeatureCard title="Se Monta en tu Patio" description="No necesitas rentar un salón. Tu patio, tu jardín, tu estacionamiento o la terraza del edificio. Montamos en cualquier espacio plano con acceso vehicular." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="configuraciones">
+  <SectionHeader
+    tag="h2"
+    title="¿Cuántas Bancas para tu Familia?"
+    paragraph1="Depende de cuántos sean — y de si tu familia es de las que dice '20 personas' y llegan 35. Aquí tienes las referencias."
+    paragraph2="Consejo: siempre pide 1-2 bancas extra. En las familias mexicanas, siempre llega alguien que no confirmó."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Familia Chica — 15 Personas" description="2 bancas estándar para adultos + 1 infantil para niños. Cabe en un patio de 30 m². El formato más común para domingos y cumpleaños pequeños." />
+      <FeatureCard title="Familia Mediana — 30 Personas" description="4 bancas estándar + 1 infantil. Patio o jardín de 50+ m². Para Día de las Madres, cumpleaños de los papás y reuniones de fin de año." />
+      <FeatureCard title="Familia Grande — 50 Personas" description="7-8 bancas estándar + 2 infantiles. Necesitas un jardín de 80+ m². Para posadas, aniversarios y las reuniones donde se junta toda la familia extendida." />
+      <FeatureCard title="Familia Enorme — 80+ Personas" description="11-14 bancas estándar + 2-3 infantiles. Esto ya es un evento. Jardín de 120+ m² o parque con permiso. Reserva con 2 semanas mínimo." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas de Familias"
+    paragraph1="Las dudas que nos mandan por WhatsApp antes de una reunión familiar. Sin formalidades — como habla la gente normal."
+    paragraph2="Si tienes otra duda, escríbenos. Respondemos como si fueras de la familia."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Caben en el patio de mi casa?", answer: "Cada banca estándar ocupa 1.80 × 1.50 m. Si tu patio tiene 4 × 6 m, caben 2 bancas cómodamente con espacio de circulación. Mándanos las medidas de tu patio por WhatsApp y te decimos exactamente cuántas caben." },
+      { question: "¿Puedo poner cazuelas calientes directo sobre la madera?", answer: "Sí. La madera barnizada resiste calor moderado. Para ollas muy calientes recomendamos poner un trapo debajo. Pero la realidad es que en las reuniones familiares todo va directo a la mesa y no pasa nada." },
+      { question: "¿Los abuelos se pueden sentar cómodos?", answer: "La banca integrada tiene asiento a 45 cm del piso, similar a una silla de comedor. Si algún familiar tiene movilidad reducida, puede usar su propia silla al lado de la banca." },
+      { question: "¿Llegan a tiempo para la comida?", answer: "Entregamos con 2-3 horas de anticipación. Si la comida es a las 3 pm, las bancas están listas a la 1 pm. Llegamos puntuales — sabemos que la familia no espera." },
+      { question: "¿Cuánto cuesta para 30 personas?", answer: "Depende de la combinación de bancas. Cotizamos por WhatsApp en minutos. Mándanos cuántos adultos, cuántos niños y dónde es — te damos precio el mismo día." },
+      { question: "¿En diciembre tienen disponibilidad?", answer: "Diciembre es el mes más demandado. Reserva tu fecha de posada en octubre o primera semana de noviembre. Las últimas semanas del año se saturan rápido." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Juntando a la familia?"
+  subtext="Cotiza las bancas para tu reunión. Te respondemos hoy."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar mesas para una reunión familiar."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, quiero cotizar mesas para una reunión familiar." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": "Renta de Mesas para Reuniones Familiares",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera para cumpleaños, Día de las Madres, posadas y reuniones familiares al aire libre en CDMX y Edomex."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

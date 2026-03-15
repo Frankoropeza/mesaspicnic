@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesas para Activaciones de Marca en CDMX | MESPIC"
+  description="Renta de mobiliario de madera para lanzamientos de producto, ferias internas, bazares corporativos y eventos de employer branding al aire libre. CDMX y Edomex."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Servicios", href: "/servicios/" }, { label: "Corporativos", href: "/servicios/eventos-corporativos/" }, { label: "Activaciones" }]} />
+</Fragment>
+
+<Hero
+  badge="Activaciones de marca"
+  title="Mobiliario de Madera para Activaciones de Marca"
+  description="Bancas de pino natural para lanzamientos de producto, ferias internas, bazares corporativos y eventos de employer branding. La madera aporta estética que funciona en fotos y redes sociales."
+  ctaPrimary={{ label: "Ver mesa premium →", href: "/catalogo/mesa-picnic-premium/" }}
+  ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
+  seoParagraph1="Las activaciones de marca al aire libre necesitan mobiliario que se vea bien en cámara. La madera de pino natural tiene una textura y un tono que fotografían mucho mejor que las mesas de plástico o metal. Hemos montado lanzamientos de producto, ferias internas, bazares de empleados y eventos de employer branding para empresas en CDMX."
+  seoParagraph2="Cada banca funciona como estación de exhibición, zona de degustación, punto de registro o área de networking. La madera es lo suficientemente resistente para soportar displays, samples, equipos de sonido y decoración de marca sin problema. Facturamos CFDI y coordinamos con tu agencia de producción."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader tag="h2" title="Activaciones con Mobiliario de Madera" paragraph1="Lanzamientos, ferias internas y eventos de marca con bancas de pino natural. La madera aporta una estética orgánica que contrasta con el branding corporativo." paragraph2="Explora los modelos recomendados para tu activación." />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Lanzamiento de producto con mobiliario de madera al aire libre" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Feria interna con bancas como estaciones de exhibición" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Bazar corporativo con productos sobre madera natural" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Evento de employer branding con mobiliario rústico" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Degustación de producto sobre banca de pino" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Punto de registro con branding sobre mobiliario" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Networking en activación de marca al aire libre" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Sesión de fotos de producto sobre madera natural" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Zona de experiencia con bancas decoradas con branding" },
+    ]}
+    recommended={[
+      { title: "Mesa Premium", description: "Con sombrilla, eventos de día", href: "/catalogo/mesa-picnic-premium/" },
+      { title: "Mesa Estándar", description: "6-8 personas, estaciones", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "Exhibición amplia, 2.40 m", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Paquete Estándar", description: "6 bancas, 36 personas", href: "/paquetes/estandar/" },
+    ]}
+    sidebarTitle="Mobiliario para activaciones"
+  />
+</section>
+
+<section class="section section-alt" id="tipos">
+  <SectionHeader tag="h2" title="Tipos de Activación" paragraph1="Cada formato de activación necesita una configuración diferente. La madera funciona como base neutra que acepta cualquier branding." paragraph2="Dinos qué tipo de activación planeas y proponemos la distribución." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Lanzamiento de Producto" description="Bancas como estaciones de exhibición y degustación. Display del producto sobre madera natural para fotos y redes. Funciona indoor y outdoor." />
+      <FeatureCard title="Feria Interna" description="Cada área o departamento tiene su banca como stand. Empleados recorren las estaciones. Formato bazar que facilita la interacción entre equipos." />
+      <FeatureCard title="Bazar de Empleados" description="Empleados venden o intercambian productos sobre las bancas. Formato mercado que funciona en estacionamientos, jardines o lobbies con área exterior." />
+      <FeatureCard title="Employer Branding" description="Eventos de reclutamiento o marca empleadora al aire libre. Las bancas como zona de entrevistas, registro o experiencia de marca. Funciona para ferias de empleo." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="incluye">
+  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="Montaje profesional para activaciones de marca. Coordinamos con tu agencia de producción o equipo de marketing." paragraph2="La madera es resistente para displays, equipos y decoración de marca." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Superficie para Branding" description="La madera acepta manteles con logo, banners laterales, displays y material POP. Sin necesidad de forrar — la madera al natural ya aporta estética." />
+      <FeatureCard title="Resistencia para Equipos" description="Las bancas soportan equipos de sonido portátiles, pantallas, samples de producto y decoración pesada sin problema." />
+      <FeatureCard title="Montaje Rápido" description="Para activaciones de medio día, montamos en 1 hora y recogemos en 30 minutos. Si es evento de todo el día, el mobiliario queda hasta que termine." />
+      <FeatureCard title="Fotos que Funcionan" description="La textura de la madera crea fondos naturales para fotos de producto y contenido de redes sociales. Mejor que fondos blancos o mobiliario genérico." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="relacionados">
+  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la activación con comida o dinámicas en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
+      <ServiceCard title="Conferencias" description="Bancas como estaciones de trabajo con espacio para laptop y libreta." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/conferencias/" btnLabel="Conferencias" />
+      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones y convivios." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/comidas/" btnLabel="Comidas empresariales" />
+      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos, ferias internas y employer branding." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/activaciones/" btnLabel="Activaciones de marca" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <SectionHeader tag="h2" title="Preguntas sobre Activaciones" paragraph1="Dudas de equipos de marketing y agencias de producción." paragraph2="Cotización formal por correo disponible." />
+  <FaqSection phone="55 3128 1706" whatsapp="5531281706" schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Puedo poner branding sobre las bancas?", answer: "Sí. Puedes colocar manteles con logo, banners laterales o displays sobre la madera. No pintamos las bancas, pero aceptan cualquier material POP encima." },
+      { question: "¿Funcionan para eventos indoor?", answer: "Sí, si el espacio tiene acceso vehicular para la entrega. Hemos montado en lobbies, patios internos y estacionamientos cubiertos." },
+      { question: "¿Cuántas bancas para una feria interna de 10 stands?", answer: "10 bancas estándar (una por stand) más 2-3 extra para zona de registro y networking. Total: 12-13 bancas." },
+      { question: "¿La madera se ve bien en fotos?", answer: "Sí, la textura del pino natural fotografía muy bien. Los fotógrafos de producto prefieren madera sobre fondos blancos o plásticos. Funciona para contenido de redes sociales." },
+      { question: "¿Rentan por medio día?", answer: "Sí. Para activaciones de 4-6 horas cotizamos por evento, no por hora. El precio incluye entrega, montaje y recolección." },
+      { question: "¿Facturan?", answer: "Sí, CFDI con datos de tu empresa. Transferencia, tarjeta y orden de compra a 15 días." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal headline="¿Planeando una activación de marca?" subtext="Cotiza el mobiliario. Coordinamos con tu agencia." phone="55 3128 1706" whatsapp="5531281706" waMessage="Hola, necesito cotizar mesas para una activación de marca." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5531281706" message="Hola, necesito cotizar mesas para una activación de marca." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Renta de Mesas para Activaciones de Marca", "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" }, "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }], "description": "Renta de mobiliario de madera para activaciones de marca, lanzamientos de producto y ferias corporativas en CDMX." })} />
+</Fragment>
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

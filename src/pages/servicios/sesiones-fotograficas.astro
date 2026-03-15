@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Renta de Mesas de Madera para Sesiones de Fotos en CDMX | MESPIC"
+  description="Bancas de pino como escenografía para fotos de producto, catálogos, redes sociales y video. Renta por hora en CDMX."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Sesiones Fotográficas" }
+  ]} />
+</Fragment>
+
+<Hero
+  badge="Para fotógrafos y marcas"
+  title="Madera Real para Fotos que se Ven Reales"
+  description="Un fondo blanco se ve limpio. Una mesa de plástico se ve como mesa de plástico. Pero una banca de pino con vetas, nudos y barniz natural se ve como algo que alguien eligió con intención. Esa diferencia se nota en cada foto."
+  ctaPrimary={{ label: "Ver mesa rústica →", href: "/catalogo/mesa-picnic-rustica/" }}
+  ctaSecondary={{ label: "Ver catálogo completo", href: "/catalogo/" }}
+  seoParagraph1="Los fotógrafos profesionales saben que el mobiliario define el tono de una imagen antes de que el sujeto se siente. Una banca de madera natural aporta calidez, textura y autenticidad que no se logra con fondos de cartón ni muebles de utilería. En MESPIC rentamos bancas de pino como escenografía para sesiones de fotos de producto, retratos, catálogos de moda, contenido para redes sociales y producciones audiovisuales."
+  seoParagraph2="Rentamos por hora — no necesitas pagar un día completo si tu sesión dura 3 horas. Entregamos la banca en tu locación (estudio, jardín, terraza, parque), la dejamos el tiempo que necesites y recogemos cuando termines. Sin contrato de exclusividad, sin mínimo de horas, sin complicaciones. Operamos en toda la Ciudad de México y zona metropolitana."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Lo que la Madera Hace por tus Fotos"
+    paragraph1="Un fotógrafo puede hacer que cualquier cosa se vea bien. Pero cuando el mobiliario ya tiene textura, tono y presencia por sí mismo, el resultado sube de nivel sin esfuerzo extra en postproducción."
+    paragraph2="Estos son tipos de sesión donde nuestras bancas se han usado como escenografía."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Sesión de producto gastronómico sobre banca de pino natural" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Catálogo de moda con modelo sentada en banca de madera al aire libre" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Flat lay de producto sobre superficie de madera barnizada" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Retrato familiar en banca de madera en jardín" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Sesión de marca de alimentos con props sobre pino" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Producción audiovisual con banca como set de grabación" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Contenido para Instagram con banca decorada como escenario" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Sesión de fotos de pareja sobre mobiliario rústico" },
+      { src: "/img/mesa-picnic-fiesta-tematica-20.webp", alt: "Behind the scenes de producción con banca de madera como set" },
+    ]}
+    recommended={[
+      { title: "Mesa Rústica", description: "Más vetas y nudos — fotogénica", href: "/catalogo/mesa-picnic-rustica/" },
+      { title: "Mesa Estándar", description: "Acabado limpio, versátil", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "Más superficie para flat lays", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Set Completo", description: "Con props y ambientación", href: "/catalogo/set-picnic-completo/" },
+    ]}
+    sidebarTitle="Mobiliario para sesiones"
+  />
+</section>
+
+<section class="section section-alt" id="tipos">
+  <SectionHeader
+    tag="h2"
+    title="Tipos de Sesión donde la Madera Marca la Diferencia"
+    paragraph1="No todas las sesiones necesitan el mismo tipo de banca ni la misma cantidad. Un flat lay de producto necesita superficie; un retrato necesita contexto. Sabemos qué funciona para cada formato porque trabajamos con fotógrafos cada semana."
+    paragraph2="Dinos qué vas a fotografiar y te recomendamos el modelo, la cantidad y el acabado que mejor funciona para tu concepto."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Catálogos de Producto" description="Ropa, accesorios, alimentos, bebidas, cosméticos — cualquier producto se ve diferente sobre madera que sobre fondo blanco. La textura del pino crea profundidad sin competir con el producto. Los e-commerce que usan madera tienen 23% más engagement según estudios de Shopify." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/catalogo/mesa-picnic-rustica/" btnLabel="Mesa rústica para producto" />
+      <ServiceCard title="Contenido para Redes" description="Instagram, TikTok, Pinterest. El contenido con mobiliario real genera más interacción que el que usa props de utilería. Una banca de madera en un jardín dice 'esto es real' sin necesidad de texto. Rentamos por hora para sesiones cortas de contenido." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa para contenido" />
+      <ServiceCard title="Retratos y Familias" description="Sesiones familiares, maternidad, parejas y retratos individuales. La banca como elemento de composición: el sujeto sentado, recargado o de pie junto a ella. Da contexto sin ser protagonista. Los fotógrafos de retrato la piden por la textura en el bokeh." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa para retratos" />
+      <ServiceCard title="Producciones Audiovisuales" description="Spots publicitarios, cortometrajes, video corporativo y YouTube. La banca como set de grabación para escenas de comida, reunión o exteriores. Resistente para montar equipos de iluminación encima sin que se tambalee." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa para video" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ventajas">
+  <SectionHeader
+    tag="h2"
+    title="Por Qué Fotógrafos Profesionales Eligen Madera Real"
+    paragraph1="Podrías comprar una tabla de madera en Home Depot y ponerla como fondo. Pero una banca completa con bancas integradas, barnizado profesional y dimensiones de 2.40 metros crea un contexto que una tabla suelta no puede — y se nota en la imagen final."
+    paragraph2="Estos son los argumentos técnicos que los fotógrafos nos dan cuando repiten servicio."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Textura que la Cámara Ama" description="Las vetas del pino, los nudos naturales y las variaciones de tono crean micro-detalles que la cámara captura con profundidad. En close-ups de producto, la textura de la madera funciona como fondo con carácter sin necesidad de props adicionales." />
+      <FeatureCard title="Tono Cálido Natural" description="El pino barnizado tiene un tono entre miel y ámbar que aporta calidez a cualquier composición. En retoque, ese tono es fácil de ajustar: se puede calentar, enfriar o desaturar sin que se vea artificial. Los fotógrafos agradecen esa flexibilidad en post." />
+      <FeatureCard title="Escala Real" description="Una banca de 2.40 × 1.50 m da espacio para flat lays de productos grandes, composiciones con modelo sentada, o escenas con dos o tres personas. No es un prop — es un mueble real con dimensiones reales. Eso se traduce en proporciones correctas en la imagen." />
+      <FeatureCard title="No Necesita Postproducción" description="La madera no tiene logos, no refleja flash de forma extraña, no tiene superficies brillantes que generen hotspots. Lo que ves en el viewfinder es lo que sale en el archivo. Menos tiempo en Lightroom, más fotos entregadas por sesión." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="como-funciona">
+  <SectionHeader
+    tag="h2"
+    title="Cómo Funciona la Renta por Hora"
+    paragraph1="No te cobramos un día completo si tu sesión dura 3 horas. Tampoco te pedimos mínimo de piezas. Necesitas una banca por 2 horas en un jardín de la Condesa — listo, eso cotizamos."
+    paragraph2="El proceso es directo. Sin contratos largos, sin burocracia, sin intermediarios."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="1. Nos Dices qué Necesitas" description="Tipo de sesión, número de bancas, ubicación y horario. Por WhatsApp te cotizamos en minutos. Si no sabes qué modelo funciona, te asesoramos según lo que vas a fotografiar." />
+      <FeatureCard title="2. Entregamos en tu Locación" description="Estudio, jardín, terraza, parque, azotea o cualquier espacio con acceso. Llegamos 30 minutos antes de tu hora de inicio. Colocamos la banca donde la necesites." />
+      <FeatureCard title="3. Tú Produces, Nosotros Esperamos" description="No te apuramos. La banca queda el tiempo que dure tu sesión. Si te tardas más de lo planeado, nos avisas por WhatsApp y ajustamos. Sin multas por tiempo extra razonable." />
+      <FeatureCard title="4. Recogemos al Terminar" description="Cuando terminas nos avisas. En 20 minutos estamos ahí para recoger. No cargas nada, no guardas nada, no tienes que devolver nada. Nosotros nos encargamos." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quien-renta">
+  <SectionHeader
+    tag="h2"
+    title="Quién Nos Renta para Fotos"
+    paragraph1="No solo fotógrafos. Las marcas, las agencias de publicidad, los creadores de contenido y hasta los restaurantes que necesitan fotos para su menú rentan nuestras bancas como escenografía."
+    paragraph2="Si produces contenido visual de cualquier tipo, la madera real eleva tu resultado."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Fotógrafos Profesionales" description="Retratos, bodas (pre-boda), familias, maternidad. Varios ya son clientes recurrentes que rentan 2-3 veces al mes. Conocen los modelos por nombre y piden el que mejor les funciona." />
+      <FeatureCard title="Marcas y E-commerce" description="Fotos de producto para tiendas en línea, Amazon, Mercado Libre. La madera como fondo eleva la percepción de calidad del producto. Funciona para alimentos, cosméticos, ropa, accesorios y artesanías." />
+      <FeatureCard title="Creadores de Contenido" description="Influencers, food bloggers, lifestyle creators. Necesitan escenarios diferentes cada semana y la banca de madera en un parque o jardín es un set que no se repite — cambia la luz, cambia la locación, cambia la foto." />
+      <FeatureCard title="Restaurantes y Cafeterías" description="Fotos para menú, Google Maps, redes sociales y app de delivery. El mobiliario de madera aporta la estética 'de granja a mesa' que los comensales asocian con comida artesanal y de calidad." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas de Fotógrafos y Productores"
+    paragraph1="Las dudas técnicas y logísticas que recibimos de profesionales de la imagen que quieren usar nuestro mobiliario como escenografía."
+    paragraph2="Si tienes una producción compleja con varios sets, escríbenos con el brief y te mandamos propuesta."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Rentan por hora?", answer: "Sí. Cotizamos por sesión con horario flexible. Si tu sesión dura 2, 4 o 6 horas, el precio se ajusta. No cobramos día completo si no lo necesitas. Mándanos la duración estimada y te damos precio exacto." },
+      { question: "¿La madera refleja el flash?", answer: "No. El acabado barnizado mate absorbe la luz sin generar hotspots ni reflejos. Funciona bien con flash directo, softbox y luz natural. No necesitas polarizador ni difusor extra por culpa del mobiliario." },
+      { question: "¿Qué modelo se ve mejor en cámara?", answer: "La mesa rústica tiene más vetas, nudos y variaciones de tono — funciona mejor para close-ups y flat lays con carácter. La estándar es más limpia y uniforme — mejor para fondos neutros donde el producto es protagonista. Depende de tu concepto." },
+      { question: "¿Puedo pintar o modificar la banca?", answer: "No, las bancas se entregan en su acabado natural y se devuelven igual. Si necesitas un color específico, puedes colocar una tela o mantel encima. Para producciones que requieran pintura o modificación permanente, pregúntanos — tenemos piezas en retiro que pueden servir." },
+      { question: "¿Entregan en estudios fotográficos?", answer: "Sí, si el estudio tiene acceso vehicular (rampa o elevador de carga). La banca estándar pesa 35 kg — cabe por puertas normales. La grande pesa 50 kg y mide 2.40 m — verificar acceso antes." },
+      { question: "¿Tienen descuento para clientes recurrentes?", answer: "Sí. Si rentas 3+ veces al mes, aplicamos tarifa preferente. Varios fotógrafos y marcas tienen cuenta abierta con nosotros. Pregúntanos por WhatsApp." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal
+  headline="¿Produciendo contenido visual?"
+  subtext="Renta por hora. Entrega en tu locación. Sin mínimo de piezas."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero rentar una banca de madera para una sesión de fotos."
+  cotizarHref="/cotizar/"
+/>
+
+<WaBubble whatsapp="5531281706" message="Hola, quiero rentar una banca para una sesión fotográfica." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": "Renta de Mesas de Madera para Sesiones Fotográficas",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }],
+    "description": "Renta de bancas de madera de pino como escenografía para sesiones fotográficas, catálogos de producto, contenido para redes sociales y producciones audiovisuales en CDMX. Renta por hora."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

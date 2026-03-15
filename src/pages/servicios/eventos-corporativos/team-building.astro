@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesas para Team Building en CDMX | MESPIC"
+  description="Renta de bancas de madera para dinámicas de integración y team building al aire libre. Estaciones de 6-8 personas. Entrega y montaje en CDMX y Edomex."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Servicios", href: "/servicios/" }, { label: "Corporativos", href: "/servicios/eventos-corporativos/" }, { label: "Team Building" }]} />
+</Fragment>
+
+<Hero
+  badge="Team building"
+  title="Mobiliario para Dinámicas de Integración"
+  description="Bancas agrupadas en estaciones de 6-8 personas que rompen jerarquías y facilitan la conversación entre áreas. Para parques, jardines corporativos y espacios deportivos."
+  ctaPrimary={{ label: "Ver catálogo →", href: "/catalogo/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="El team building funciona mejor cuando sacas a la gente de la sala de juntas. Las bancas de madera agrupan equipos de 6-8 personas frente a frente, lo que genera conversación natural entre áreas que normalmente no conviven. Hemos montado dinámicas para empresas de 20 hasta 400 colaboradores en parques, jardines corporativos y espacios deportivos."
+  seoParagraph2="Cada banca funciona como una estación de trabajo o de dinámica independiente. Los equipos rotan entre bancas según la actividad. Al estar al aire libre con luz natural y espacio abierto, la participación y la energía del grupo aumentan significativamente comparado con un salón cerrado."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader tag="h2" title="Así se Ve un Team Building" paragraph1="Montajes de bancas agrupadas en estaciones para dinámicas de equipo. Parques, jardines corporativos y espacios abiertos en CDMX." paragraph2="Explora los modelos recomendados para tu evento en la barra lateral." />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Estaciones de team building con bancas de madera en parque" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Equipos trabajando en dinámicas sobre bancas al aire libre" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Grupo de 8 personas en dinámica de integración" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Vista general de team building con 10 estaciones" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Empleados compartiendo almuerzo después de dinámicas" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Estación de snacks sobre banca de madera" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Actividad de integración en jardín corporativo" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Premiación de equipos sobre mobiliario de pino" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Cierre de team building con brindis al aire libre" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar", description: "6-8 personas por estación", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "10-12, dinámicas amplias", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Paquete Estándar", description: "6 bancas, 36 personas", href: "/paquetes/estandar/" },
+      { title: "Paquete Premium", description: "10 bancas, 60 personas", href: "/paquetes/premium/" },
+    ]}
+    sidebarTitle="Mobiliario para team building"
+  />
+</section>
+
+<section class="section section-alt" id="formatos">
+  <SectionHeader tag="h2" title="Formatos de Team Building" paragraph1="Cada dinámica requiere una configuración diferente. Estas son las que más montamos y cómo distribuimos las bancas para cada una." paragraph2="Si tu empresa tiene un formato propio, nos adaptamos. Mándanos la dinámica y te proponemos la distribución." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Estaciones Rotativas" description="4-8 bancas distribuidas como estaciones. Los equipos rotan cada 15-20 minutos. Cada banca tiene una actividad diferente. El formato más popular para 40-80 personas." />
+      <FeatureCard title="Mesas de Debate" description="Bancas enfrentadas para dinámicas de discusión, lluvia de ideas o resolución de casos. 6-8 personas por mesa con moderador. Funciona para workshops y seminarios." />
+      <FeatureCard title="Competencias por Equipo" description="Bancas como base de cada equipo. Desde trivias hasta retos físicos, cada grupo tiene su estación fija. Funciona con 4-10 equipos en espacios amplios." />
+      <FeatureCard title="Almuerzo + Dinámica" description="Primero se usa el mobiliario para la actividad, después se sirve la comida sobre las mismas bancas. Doble uso sin necesidad de cambiar el montaje." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="incluye">
+  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="El servicio para team building es rápido y directo. Llegamos, montamos las estaciones según tu dinámica y recogemos al terminar." paragraph2="Facturamos CFDI. Coordinamos con tu equipo de RH o tu agencia de eventos." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Factura CFDI" description="Para tu departamento de compras. RFC, razón social y uso de CFDI configurables." />
+      <FeatureCard title="Montaje en 1 Hora" description="Para eventos de 30-80 personas, el montaje de estaciones toma menos de 1 hora. Llegamos con anticipación." />
+      <FeatureCard title="Configuración Flexible" description="Agrupamos, separamos o redistribuimos las bancas según la dinámica. Si cambia el plan, nos adaptamos en sitio." />
+      <FeatureCard title="Disponibilidad entre Semana" description="Los team buildings suelen ser martes a jueves. Tenemos más disponibilidad entre semana que fines de semana." />
+    </div>
+  </div>
+</section>
+
+<!-- Relacionados -->
+<section class="section section-alt" id="relacionados">
+  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Si tu evento combina dinámicas con comida o conferencia, explora los otros formatos. Todos usan el mismo mobiliario." paragraph2="También puedes combinar formatos: team building por la mañana y comida de integración al mediodía." />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
+      <ServiceCard title="Conferencias" description="Bancas como estaciones de trabajo con espacio para laptop y libreta. Seminarios de hasta 120 personas." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/conferencias/" btnLabel="Conferencias" />
+      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones y convivios. De 50 a 300 personas." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/comidas/" btnLabel="Comidas empresariales" />
+      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos, ferias internas y eventos de employer branding." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/activaciones/" btnLabel="Activaciones de marca" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <SectionHeader tag="h2" title="Preguntas sobre Team Building" paragraph1="Dudas de coordinadores de RH y agencias que organizan dinámicas de integración." paragraph2="Si necesitas una cotización formal, escríbenos y te la enviamos por correo." />
+  <FaqSection phone="55 3128 1706" whatsapp="5531281706" schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Cuántas bancas para un team building de 60 personas?", answer: "8-10 bancas estándar, agrupadas en estaciones de 6-8 personas. Si la dinámica usa equipos más grandes, 5-6 bancas grandes de 10-12 personas." },
+      { question: "¿Pueden montar en un parque público?", answer: "Sí, si tienes el permiso del parque. Hemos montado en Chapultepec, Viveros, Parque Lincoln y parques delegacionales. Solo necesitamos acceso vehicular para la entrega." },
+      { question: "¿Las bancas sirven para comer después de la dinámica?", answer: "Sí, ese es uno de los beneficios — el mismo mobiliario sirve para la actividad y para la comida. No necesitas cambiar el montaje." },
+      { question: "¿Facturan para empresas?", answer: "Sí, emitimos CFDI con los datos de tu empresa. Aceptamos orden de compra con pago a 15 días." },
+      { question: "¿Con cuánta anticipación debo reservar?", answer: "Para eventos entre semana generalmente hay disponibilidad con 5-7 días de anticipación. Para fines de semana, 2 semanas mínimo." },
+      { question: "¿Pueden llevar más bancas de las cotizadas?", answer: "Si necesitas agregar bancas de último momento, escríbenos por WhatsApp y confirmamos disponibilidad. Generalmente podemos agregar 2-4 bancas extra el mismo día." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal headline="¿Organizando un team building?" subtext="Cotiza con factura CFDI. Te respondemos el mismo día." phone="55 3128 1706" whatsapp="5531281706" waMessage="Hola, necesito cotizar mesas para un team building." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5531281706" message="Hola, necesito cotizar mesas para un team building." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Renta de Mesas para Team Building", "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" }, "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }], "description": "Renta de bancas de madera para dinámicas de team building al aire libre en CDMX y Edomex." })} />
+</Fragment>
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>

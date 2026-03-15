@@ -1,30 +1,20 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import Hero from '../../components/Hero.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
-import FeatureCard from '../../components/FeatureCard.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
-import ProductGallery from '../../components/ProductGallery.astro';
-import FaqSection from '../../components/FaqSection.astro';
-import CtaBarFinal from '../../components/CtaBarFinal.astro';
-import WaBubble from '../../components/WaBubble.astro';
-import GallerySection from '../../components/GallerySection.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
 
-const galeriaImages = [
-  { src: "/img/corp-rooftop-1.avif", alt: "Mesas de madera en terraza corporativa con vista al skyline de Ciudad de México" },
-  { src: "/img/corp-teambuilding-1.avif", alt: "Bancas picnic en parque verde para actividad de team building empresarial" },
-  { src: "/img/corp-almuerzo-1.avif", alt: "Almuerzo ejecutivo al aire libre con mesas de madera en campus corporativo" },
-  { src: "/img/mesa-picnic-seminario-corporativo.webp", alt: "Mobiliario de madera preparado para seminario corporativo al aire libre" },
-  { src: "/img/mesa-picnic-evento-masivo-dia.webp", alt: "Evento corporativo masivo con múltiples bancas de madera en explanada" },
-  { src: "/img/mesa-picnic-conferencia-empresarial-plantas.webp", alt: "Conferencia empresarial en espacio exterior con mesas de pino natural" },
-  { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Espacio de networking corporativo con bancas de madera" },
-];
 ---
 
 <BaseLayout
   title="Mesas Picnic para Eventos Corporativos en CDMX | MESPIC"
-  description="Renta de mobiliario de madera para team buildings, conferencias, comidas empresariales y activaciones de marca. Facturamos CFDI. Entrega y montaje en CDMX y Edomex."
+  description="Bancas de madera para team buildings, conferencias y comidas empresariales. Facturamos CFDI. Montaje incluido en CDMX."
 >
 
 <!-- Breadcrumbs -->
@@ -88,10 +78,10 @@ const galeriaImages = [
   />
   <div class="container">
     <div class="grid-4">
-      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración. Ideal para parques, jardines y espacios deportivos. El formato rompe la formalidad de oficina." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa para team building" />
-      <ServiceCard title="Conferencias al Aire Libre" description="Bancas como estaciones de trabajo con espacio para laptop, libreta y vaso. Seminarios de hasta 120 personas en jardines corporativos. Luz natural y ventilación que mejoran la atención." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa para conferencias" />
-      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones de resultados y convivios entre sucursales. De 50 a 300 personas con bancas de madera en vez de mesas redondas de hotel." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/paquetes/premium/" btnLabel="Paquete para comidas" />
-      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos de producto, ferias internas, bazares corporativos y eventos de employer branding. La madera aporta una estética natural que funciona en fotos y redes." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-premium/" btnLabel="Mobiliario para marcas" />
+      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración. Ideal para parques, jardines y espacios deportivos. El formato rompe la formalidad de oficina." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
+      <ServiceCard title="Conferencias al Aire Libre" description="Bancas como estaciones de trabajo con espacio para laptop, libreta y vaso. Seminarios de hasta 120 personas en jardines corporativos. Luz natural y ventilación que mejoran la atención." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/conferencias/" btnLabel="Conferencias" />
+      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones de resultados y convivios entre sucursales. De 50 a 300 personas con bancas de madera en vez de mesas redondas de hotel." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/comidas/" btnLabel="Comidas empresariales" />
+      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos de producto, ferias internas, bazares corporativos y eventos de employer branding. La madera aporta una estética natural que funciona en fotos y redes." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/activaciones/" btnLabel="Activaciones de marca" />
     </div>
   </div>
 </section>
@@ -130,15 +120,6 @@ const galeriaImages = [
       <FeatureCard title="500+ Personas" description="70+ bancas. Eventos masivos, festivales corporativos y activaciones de marca. Requiere reserva anticipada de 2 semanas mínimo." />
     </div>
   </div>
-</section>
-
-<!-- Galería corporativa -->
-<section class="section" id="galeria-corporativo">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:0.5rem;">Eventos Corporativos con Nuestro Mobiliario</h2>
-    <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem;">Team buildings, almuerzos ejecutivos y conferencias al aire libre en CDMX y Edomex.</p>
-  </div>
-  <GallerySection images={galeriaImages} id="galeria" />
 </section>
 
 <!-- FAQ -->

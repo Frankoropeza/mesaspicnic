@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Mesas para Comidas Empresariales en CDMX | MESPIC"
+  description="Renta de bancas de madera para comidas de fin de año, celebraciones de resultados y convivios empresariales al aire libre. De 50 a 300 personas. CDMX y Edomex."
+>
+
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[{ label: "Inicio", href: "/" }, { label: "Servicios", href: "/servicios/" }, { label: "Corporativos", href: "/servicios/eventos-corporativos/" }, { label: "Comidas" }]} />
+</Fragment>
+
+<Hero
+  badge="Comidas empresariales"
+  title="Mobiliario para Comidas de Integración y Cierre Anual"
+  description="Bancas de madera para comidas de fin de año, celebraciones de resultados, convivios entre sucursales y almuerzos de bienvenida. De 50 a 300 personas al aire libre."
+  ctaPrimary={{ label: "Ver paquete premium →", href: "/paquetes/premium/" }}
+  ctaSecondary={{ label: "Ver catálogo", href: "/catalogo/" }}
+  seoParagraph1="Las comidas empresariales al aire libre con bancas de madera cambian la experiencia: tus colaboradores comen a gusto sin la rigidez de un salón de banquetes, el ambiente se siente más cercano y las conversaciones fluyen entre áreas que normalmente no conviven. Hemos montado desde almuerzos de equipo para 50 personas hasta cenas de cierre anual para 300."
+  seoParagraph2="El mobiliario de madera reemplaza las mesas redondas de hotel con algo más natural y memorable. Cada banca sienta 6-8 personas con espacio para plato, cubiertos, vaso y centro de mesa. El montaje incluye distribución según el espacio, pasillos de servicio para meseros y zona de buffet o barra si la necesitas."
+/>
+
+<section class="section" id="montajes">
+  <SectionHeader tag="h2" title="Comidas Empresariales al Aire Libre" paragraph1="Montajes para almuerzos, cenas y convivios corporativos. Jardines, terrazas y espacios abiertos en la Ciudad de México." paragraph2="Desde 50 hasta 300 personas con distribuciones que incluyen zona de buffet y barra." />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Comida de fin de año con 30 bancas en jardín corporativo" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Almuerzo de integración para 80 personas al aire libre" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Cena empresarial con iluminación cálida sobre madera" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Buffet servido junto a bancas de madera en terraza" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Convivio entre sucursales con mobiliario rústico" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Celebración de resultados con brindis sobre bancas" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Almuerzo de bienvenida para nuevo equipo" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Posada corporativa con decoración navideña" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Cierre anual con 200 personas en hacienda" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar", description: "6-8 personas, versátil", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "10-12, mesa directiva", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Paquete Premium", description: "10 bancas + coordinador", href: "/paquetes/premium/" },
+      { title: "Paquete Estándar", description: "6 bancas, 36 personas", href: "/paquetes/estandar/" },
+    ]}
+    sidebarTitle="Mobiliario para comidas"
+  />
+</section>
+
+<section class="section section-alt" id="tipos">
+  <SectionHeader tag="h2" title="Tipos de Comida Empresarial" paragraph1="Cada ocasión tiene su propia logística. No es lo mismo un almuerzo de 50 que una cena de cierre para 300." paragraph2="Dinos el tipo de evento y el número de personas, y te proponemos la distribución ideal." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Cierre Anual" description="Cena o comida para 100-300 personas. El evento más grande del año. Requiere reserva con 2-3 semanas de anticipación y plano de distribución con tu equipo." />
+      <FeatureCard title="Celebración de Resultados" description="Comida para 30-80 personas. Más informal que el cierre anual. Bancas agrupadas por área o departamento. Funciona en jardines y terrazas." />
+      <FeatureCard title="Posada Corporativa" description="Temporada noviembre-diciembre. Alta demanda. Reserva con anticipación. Decoración navideña sobre la madera: series de luces, esferas, nochebuenas." />
+      <FeatureCard title="Almuerzo de Bienvenida" description="Para nuevos equipos o fusiones. 20-50 personas. Formato íntimo que facilita la presentación. Las bancas agrupan equipos pequeños." />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="incluye">
+  <SectionHeader tag="h2" title="Qué Incluye" paragraph1="Logística completa para que tu comida empresarial esté lista. Solo preocúpate por el menú y los invitados." paragraph2="Facturamos CFDI. Coordinamos con tu servicio de catering." />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Distribución con Pasillos de Servicio" description="Dejamos pasillos de 1.2 m entre bancas para que los meseros circulen con charolas. No es solo poner bancas — es planificar el flujo del servicio." />
+      <FeatureCard title="Zona de Buffet" description="Reservamos bancas extra como estación de buffet o barra de bebidas. Las bancas grandes de 2.40 m funcionan perfecto como mesa de servicio." />
+      <FeatureCard title="Montaje para Evento de Noche" description="Para cenas, montamos con tiempo suficiente para que el equipo de iluminación y decoración trabaje antes de que lleguen los invitados." />
+      <FeatureCard title="Factura y Orden de Compra" description="CFDI con datos de tu empresa. Aceptamos orden de compra con pago a 15 días contra factura. Transferencia, depósito o tarjeta." />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="relacionados">
+  <SectionHeader tag="h2" title="Otros Servicios Corporativos" paragraph1="Combina la comida con dinámicas o conferencia en el mismo evento." paragraph2="El mobiliario es el mismo — solo cambia la distribución." />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/team-building/" btnLabel="Team building" />
+      <ServiceCard title="Conferencias" description="Bancas como estaciones de trabajo con espacio para laptop y libreta." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/conferencias/" btnLabel="Conferencias" />
+      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones y convivios." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/comidas/" btnLabel="Comidas empresariales" />
+      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos, ferias internas y employer branding." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/activaciones/" btnLabel="Activaciones de marca" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <SectionHeader tag="h2" title="Preguntas sobre Comidas Empresariales" paragraph1="Dudas de coordinadores de eventos y departamentos de logística." paragraph2="Cotización formal por correo disponible." />
+  <FaqSection phone="55 3128 1706" whatsapp="5531281706" schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Cuántas bancas para 200 personas?", answer: "28-34 bancas estándar, dependiendo de si usas mesas de buffet. Te mandamos un plano con la distribución si nos das las medidas del espacio." },
+      { question: "¿Coordinan con servicio de catering?", answer: "Sí. Dejamos pasillos de servicio para meseros y reservamos bancas para buffet o barra. Nos adaptamos al flujo que tu catering necesite." },
+      { question: "¿Tienen disponibilidad en diciembre?", answer: "Diciembre es el mes con más demanda por posadas. Recomendamos reservar en octubre para asegurar fecha y cantidad. Últimas semanas de noviembre también se saturan." },
+      { question: "¿Las bancas funcionan para comidas formales?", answer: "Sí. La superficie barnizada acepta manteles, vajilla y copas. Si tu comida es tipo banquete formal, recomendamos manteles largos para un acabado elegante." },
+      { question: "¿Pueden montar en un restaurante con terraza?", answer: "Sí. Si el restaurante tiene área exterior y acceso vehicular, llevamos las bancas y montamos ahí. Complementamos o reemplazamos el mobiliario del lugar." },
+      { question: "¿Facturan?", answer: "Sí, CFDI con datos de tu empresa. Aceptamos transferencia, tarjeta y orden de compra a 15 días." }
+    ]}
+  />
+</section>
+
+<CtaBarFinal headline="¿Organizando una comida empresarial?" subtext="Cotiza con factura CFDI. Distribución incluida." phone="55 3128 1706" whatsapp="5531281706" waMessage="Hola, necesito cotizar mesas para una comida empresarial." cotizarHref="/cotizar/" />
+<WaBubble whatsapp="5531281706" message="Hola, necesito cotizar mesas para una comida empresarial." />
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Renta de Mesas para Comidas Empresariales", "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" }, "areaServed": [{ "@type": "City", "name": "Ciudad de México" }, { "@type": "State", "name": "Estado de México" }], "description": "Renta de bancas de madera para comidas empresariales, cierres anuales y posadas corporativas en CDMX." })} />
+</Fragment>
+</BaseLayout>
+
+<style>
+  :global(.hero) { padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem); }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid-4 { grid-template-columns: 1fr; } }
+</style>
