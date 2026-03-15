@@ -1,64 +1,165 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
+import CtaBar from '../../components/CtaBar.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
 ---
 
 <BaseLayout
-  title="Servicios de Renta de Mesas Picnic | MESPIC"
-  description="Conoce todos nuestros servicios de renta de mesas picnic: bodas, eventos corporativos, fiestas infantiles y fiestas temáticas en CDMX y Edomex."
+  title="Servicios de Renta de Mobiliario de Madera | MESPIC — CDMX"
+  description="Renta de bancas y mesas picnic para bodas, corporativos, fiestas infantiles, picnics románticos, festivales y sesiones fotográficas. Entrega y montaje incluidos en CDMX y Edomex."
 >
 
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
 <Hero
-  title="Servicios de Renta de Mesas Picnic"
-  description="Tenemos la mesa perfecta para cada tipo de evento. Descubre nuestras opciones y cotiza sin compromiso."
-  ctaPrimary={{ label: "Cotizar ahora →", href: "/cotizar/" }}
-  ctaSecondary={{ label: "Contacto", href: "/contacto/" }}
-  seoParagraph1="En MESPIC ofrecemos servicios especializados de renta de mesas picnic para todo tipo de celebraciones. Desde bodas íntimas hasta grandes eventos corporativos, nuestras mesas de madera natural se adaptan a cualquier ambiente y estilo decorativo."
-  seoParagraph2="Cada servicio incluye entrega puntual, montaje profesional y recolección sin costo adicional. Trabajamos con los mejores materiales y un equipo comprometido con hacer de tu evento una experiencia memorable."
+  badge="8 tipos de servicio"
+  title="Mobiliario de Madera para Cada Tipo de Evento"
+  description="No importa si es una boda para 200 personas o un picnic romántico para dos. Tenemos la configuración exacta para tu evento, con entrega y montaje incluidos."
+  ctaPrimary={{ label: "Ver catálogo →", href: "/catalogo/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="MESPIC ofrece 8 servicios especializados de renta de mobiliario de madera para eventos al aire libre. Cada uno tiene su propia logística: no es lo mismo preparar bancas para una boda en un jardín de Coyoacán que montar 20 mesas para un festival gastronómico en Roma Norte. Por eso adaptamos el servicio al tipo de evento, no al revés."
+  seoParagraph2="Todos los servicios incluyen entrega en tu ubicación, montaje profesional por nuestro equipo y recolección al terminar. No subcontratamos ni cobramos extras por maniobras. Operamos los 7 días de la semana con cobertura en toda la Ciudad de México y municipios del Estado de México."
 />
 
-<section class="section">
+<!-- CtaBar -->
+<CtaBar
+  headline="Elige tu tipo de evento"
+  items={[
+    { label: "Boda", href: "/servicios/bodas/", icon: "boda" },
+    { label: "Corporativo", href: "/servicios/eventos-corporativos/", icon: "corporativo" },
+    { label: "Fiesta infantil", href: "/servicios/fiestas-infantiles/", icon: "fiesta" },
+    { label: "Picnic romántico", href: "/servicios/picnic-romantico/", icon: "picnic" },
+  ]}
+/>
+
+<!-- 8 Servicios -->
+<section class="section" id="todos-los-servicios">
+  <SectionHeader
+    tag="h2"
+    title="Todos los Servicios"
+    paragraph1="Cada tipo de evento tiene necesidades distintas de mobiliario, cantidad de piezas y tipo de montaje. Aquí puedes explorar cada servicio en detalle y ver qué incluye."
+    paragraph2="Si no estás seguro de cuál necesitas, cotiza por WhatsApp y te asesoramos según tu fecha, ubicación y número de invitados."
+  />
   <div class="container">
-    <div class="services-grid">
-      <ServiceCard
-        title="Bodas"
-        description="Mesas picnic elegantes para bodas al aire libre. Ambiente romántico y natural con madera de la mejor calidad."
-        image="/img/mesa-picnic-boda-elegante-decoracion.webp"
-        href="/servicios/bodas/"
-      />
-      <ServiceCard
-        title="Eventos Corporativos"
-        description="Mobiliario profesional para team buildings, conferencias y comidas empresariales al aire libre."
-        image="/img/mesa-picnic-evento-corporativo-networking.webp"
-        href="/servicios/eventos-corporativos/"
-      />
-      <ServiceCard
-        title="Fiestas Infantiles"
-        description="Mesas picnic coloridas y seguras para cumpleaños y fiestas infantiles que los niños aman."
-        image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp"
-        href="/servicios/fiestas-infantiles/"
-      />
-      <ServiceCard
-        title="Fiestas Temáticas"
-        description="Mesas versátiles para picnics románticos, fiestas mexicanas, ferias gastronómicas y eventos especiales."
-        image="/img/mesa-picnic-fiesta-tematica-20.webp"
-        href="/servicios/fiestas-tematicas/"
-      />
+    <div class="grid-4">
+      <ServiceCard title="Bodas al Aire Libre" description="Bancas de pino barnizadas a mano para bodas en jardines, haciendas y terrazas. Combinan con decoración rústica, boho, clásica o minimalista. Montaje incluido en tu ubicación." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/bodas/" btnLabel="Mesas para bodas" />
+      <ServiceCard title="Eventos Corporativos" description="Mobiliario para team buildings, conferencias y comidas empresariales al aire libre. Configuramos el montaje según la cantidad de asistentes y el formato de tu evento." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/eventos-corporativos/" btnLabel="Mobiliario corporativo" />
+      <ServiceCard title="Fiestas Infantiles" description="Bancas lijadas a grano fino, sin astillas ni bordes filosos. Modelo infantil con altura adaptada para niños. Para cumpleaños, baby showers y reuniones familiares." image="/img/mesa-picnic-fiesta-infantil-globos-colores.webp" href="/servicios/fiestas-infantiles/" btnLabel="Mesas para niños" />
+      <ServiceCard title="Picnic Romántico" description="Montaje íntimo para dos personas con banca decorada, mantelería y ambientación. Ideal para pedidas de mano, aniversarios o una tarde especial en cualquier parque de la ciudad." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/servicios/picnic-romantico/" btnLabel="Picnic para parejas" />
+      <ServiceCard title="Fiestas Temáticas" description="Montajes para fiestas mexicanas, XV años, ferias gastronómicas y celebraciones temáticas. La madera natural se adapta a cualquier ambientación que tengas en mente." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/servicios/fiestas-tematicas/" btnLabel="Mesas para fiestas" />
+      <ServiceCard title="Reuniones Familiares" description="Mobiliario para cumpleaños de adultos, día de las madres, posadas y reuniones de fin de semana. Bancas amplias donde caben abuelos, papás y niños sin apretarse." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/servicios/reuniones-familiares/" btnLabel="Mesas para familia" />
+      <ServiceCard title="Festivales y Ferias" description="Bancas resistentes de alta capacidad para ferias gastronómicas, bazares, festivales culturales y eventos masivos al aire libre. Disponibles en volumen para 100+ personas." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/servicios/festivales/" btnLabel="Mobiliario para festivales" />
+      <ServiceCard title="Sesiones Fotográficas" description="Bancas de madera como escenografía para sesiones de fotos profesionales, contenido para redes sociales, catálogos y producciones audiovisuales. Montaje por hora disponible." image="/img/mesa-picnic-fiesta-tematica-20.webp" href="/servicios/sesiones-fotograficas/" btnLabel="Renta para fotos" />
     </div>
   </div>
 </section>
 
+<!-- Qué incluye cada servicio -->
+<section class="section section-alt" id="incluye">
+  <SectionHeader
+    tag="h2"
+    title="Qué Incluye Cada Servicio"
+    paragraph1="Sin importar el tipo de evento que elijas, todos nuestros servicios vienen con lo mismo: entrega, montaje, uso ilimitado y recolección. Sin cargos extra, sin letra chica."
+    paragraph2="La diferencia entre servicios está en el tipo de montaje, la cantidad de piezas y la asesoría que te damos según tu evento."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Entrega en tu Ubicación" description="Llevamos el mobiliario a donde sea tu evento: jardín, terraza, parque, hacienda o salón. Cubrimos todas las alcaldías de CDMX y municipios del Edomex." />
+      <FeatureCard title="Montaje Profesional" description="Nuestro equipo arma y distribuye las bancas según el espacio y la cantidad de invitados. Llegamos con anticipación para que todo esté listo antes del evento." />
+      <FeatureCard title="Uso sin Límite de Tiempo" description="Las bancas quedan en tu evento hasta que termine. No cobramos por hora ni por tiempo extra. Tú decides cuándo recogemos." />
+      <FeatureCard title="Recolección Incluida" description="Al terminar tu evento, nuestro equipo recoge todo el mobiliario. No tienes que hacer nada. El precio que cotizamos ya incluye este servicio." />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ de servicios -->
+<section class="section" id="faq-servicios">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre los Servicios"
+    paragraph1="Dudas comunes que recibimos antes de que los clientes elijan su tipo de servicio. Si tienes una pregunta diferente, escríbenos por WhatsApp."
+    paragraph2="Cada servicio tiene su propia página con información detallada, fotos y precios de referencia."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Cuál es la diferencia entre los servicios?", answer: "La diferencia está en el tipo de montaje y la asesoría. Para una boda te ayudamos con la distribución en el jardín. Para un corporativo configuramos según el formato del evento. Para un festival preparamos volumen de bancas resistentes. El mobiliario es el mismo, la logística cambia." },
+      { question: "¿Puedo combinar varios servicios?", answer: "Sí. Si tu evento tiene zona de niños y zona de adultos, llevamos bancas estándar e infantiles. Si quieres un rincón de fotos además del mobiliario principal, lo incluimos en la cotización." },
+      { question: "¿Cuántas bancas necesito para mi evento?", answer: "Depende del número de invitados. Como referencia: la banca estándar acomoda 6 personas, la grande 10-12. Para 50 invitados necesitas aproximadamente 8-9 bancas estándar. Cotiza por WhatsApp y te calculamos la cantidad exacta." },
+      { question: "¿Tienen disponibilidad para fines de semana?", answer: "Operamos los 7 días de la semana. Los fines de semana son los más solicitados, así que recomendamos reservar con al menos 1 semana de anticipación." },
+      { question: "¿Pueden montar en cualquier ubicación?", answer: "Sí, siempre que haya acceso vehicular para la entrega. Montamos en jardines, terrazas, parques públicos (con permiso), haciendas, salones con área exterior y azoteas. Si no estás seguro, mándanos la ubicación por WhatsApp y te confirmamos." },
+      { question: "¿El servicio de picnic romántico incluye decoración?", answer: "Sí, el picnic romántico incluye banca decorada, mantelería, cojines y ambientación básica. Si quieres agregar flores, velas o menaje especial, cotizamos por separado." }
+    ]}
+  />
+</section>
+
+<!-- CTA Final -->
+<CtaBarFinal
+  headline="¿Ya sabes qué servicio necesitas?"
+  subtext="Cotiza sin compromiso. Te asesoramos según tu evento."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar un servicio de mesas picnic para mi evento."
+  cotizarHref="/cotizar/"
+/>
+
+<!-- Schema.org -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Renta de Mesas Picnic para Eventos",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MESPIC",
+      "telephone": "+52-55-3128-1706"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad de México" },
+      { "@type": "State", "name": "Estado de México" }
+    ],
+    "description": "Servicio de renta de mobiliario de madera para bodas, corporativos, fiestas infantiles, picnics románticos, festivales y sesiones fotográficas en CDMX y Edomex.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock"
+    }
+  })} />
+</Fragment>
+
 </BaseLayout>
 
 <style>
-  .services-grid {
+  :global(.hero) {
+    padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem);
+  }
+
+  .grid-4 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 640px) {
-    .services-grid { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
   }
 </style>

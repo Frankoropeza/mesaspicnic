@@ -1,23 +1,37 @@
 :root {
-  --c-primary: #2D5016;
-  --c-secondary: #8B7355;
-  --c-accent: #D4A574;
-  --c-bg: #ffffff;
-  --c-bg-alt: #FAF8F5;
-  --c-text: #1a1a1a;
-  --c-text-muted: #6b7280;
-  --c-border: #e5e7eb;
+  /* ── Paleta — Madera + Naturaleza + Premium ── */
+  --c-primary: #2C5530;
+  --c-primary-light: #3D7A45;
+  --c-primary-dark: #1B3B20;
+  --c-secondary: #8B6F4E;
+  --c-accent: #C8956C;
+  --c-accent-light: #E8C9A8;
+  --c-bg: #FEFDFB;
+  --c-bg-alt: #F7F4F0;
+  --c-bg-hero: #F2EDE7;
+  --c-text: #1C1917;
+  --c-text-muted: #78716C;
+  --c-border: #E7E0D8;
+
+  /* ── Tipografía ── */
+  --font-head: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Layout ── */
   --header-height: 70px;
-  --topbar-height: 0px;
+  --topbar-height: 36px;
+  --container: 1200px;
+
+  /* ── Radii ── */
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-lg: 20px;
+
+  /* ── Easing (solo botones y menú) ── */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,7 +43,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   color: var(--c-text);
   background: var(--c-bg);
   line-height: 1.6;
@@ -37,118 +51,57 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
-  line-height: 1.2;
-  font-weight: 700;
+  font-family: var(--font-head);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-ul, ol {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
+.hdr-stack {
+  position: fixed;
+  top: var(--topbar-height, 36px);
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.section {
-  padding: 5rem 0;
-}
-
-.section-alt {
-  background: var(--c-bg-alt);
-}
-
-.section-title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  text-align: center;
-  margin-bottom: 0.75rem;
-  color: var(--c-text);
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--c-text-muted);
-  font-size: 1.125rem;
-  max-width: 600px;
-  margin: 0 auto 3rem;
-}
+.section { padding: 5rem 0; }
+.section-alt { background: var(--c-bg-alt); }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
-  border-radius: var(--radius-sm);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-lg);
   font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s var(--ease);
+  font-size: 0.9375rem;
   text-align: center;
   justify-content: center;
+  letter-spacing: 0.01em;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 
-.btn-primary {
-  background: var(--c-primary);
-  color: #fff;
-}
+.btn-primary { background: var(--c-primary); color: #fff; }
+.btn-primary:hover { background: var(--c-primary-light); }
 
-.btn-primary:hover {
-  background: #1e3a0e;
-  transform: translateY(-1px);
-}
+.btn-outline { border: 2px solid var(--c-border); color: var(--c-text); background: var(--c-bg); }
+.btn-outline:hover { border-color: var(--c-primary); color: var(--c-primary); }
 
-.btn-outline {
-  border: 2px solid var(--c-primary);
-  color: var(--c-primary);
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background: var(--c-primary);
-  color: #fff;
-}
-
-.btn-wa {
-  background: #25D366;
-  color: #fff;
-}
-
-.btn-wa:hover {
-  background: #1fb855;
-  transform: translateY(-1px);
-}
-
-.btn-accent {
-  background: var(--c-accent);
-  color: #fff;
-}
-
-.btn-accent:hover {
-  background: #c4955e;
-  transform: translateY(-1px);
-}
+.btn-wa { background: #25D366; color: #fff; transition: background 0.2s var(--ease); }
+.btn-wa:hover { background: #1fb855; }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 3.5rem 0;
-  }
+  .section { padding: 3.5rem 0; }
 }

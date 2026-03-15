@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import ServiceCard from '../../../components/ServiceCard.astro';
+import FaqSection from '../../../components/FaqSection.astro';
+import ProductGallery from '../../../components/ProductGallery.astro';
+import CtaBarFinal from '../../../components/CtaBarFinal.astro';
+import WaBubble from '../../../components/WaBubble.astro';
+---
+
+<BaseLayout
+  title="Boda Rústica con Mesas de Madera | MESPIC — CDMX"
+  description="Renta de bancas de madera para bodas rústicas en jardines y haciendas. Pino natural sin pintar, combinable con flores silvestres, velas y yute. Entrega y montaje en CDMX y Edomex."
+>
+
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Bodas", href: "/servicios/bodas/" },
+    { label: "Boda Rústica" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
+<Hero
+  badge="Estilo rústico"
+  title="Boda Rústica con Mobiliario de Madera Natural"
+  description="El estilo más solicitado para bodas al aire libre. Pino sin pintar que combina con flores silvestres, velas, yute y series de luces cálidas. Sin necesidad de forrar ni decorar la estructura."
+  ctaPrimary={{ label: "Ver mesa rústica →", href: "/catalogo/mesa-picnic-rustica/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="La boda rústica es el estilo que más montamos en MESPIC. La madera de pino al natural tiene la textura y el tono exacto que buscan las parejas que quieren una ceremonia campestre sin que se vea improvisada. No necesitas manteles, carpas decorativas ni estructuras adicionales — la banca es el elemento decorativo en sí."
+  seoParagraph2="Este estilo funciona especialmente bien en jardines con pasto, haciendas con arcos de piedra, viñedos y espacios con árboles maduros. Hemos montado bodas rústicas desde 20 hasta 250 invitados en zonas como Coyoacán, Tlalpan, Tepotzotlán, Valle de Bravo y haciendas del corredor Naucalpan-Huixquilucan."
+/>
+
+<!-- Mobiliario para boda rústica -->
+<section class="section" id="mobiliario-rustico">
+  <SectionHeader
+    tag="h2"
+    title="Así se Ve el Mobiliario en una Boda Rústica"
+    paragraph1="Montajes con bancas de pino natural en jardines, haciendas y terrazas. Cada imagen es de un evento real o de referencia para que visualices cómo queda en tu espacio."
+    paragraph2="En la barra lateral puedes explorar los modelos y paquetes disponibles para tu boda."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Banca de pino con flores silvestres y velas para boda rústica en jardín" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Bancas alineadas con caminos de eucalipto en hacienda" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Montaje rústico con series de luces cálidas al atardecer" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Detalle de centro de mesa con lavanda sobre pino natural" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Vista general con 15 bancas de madera en jardín" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Mesa principal decorada con lino y rosas blancas" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Bancas con cojines de algodón para ceremonia civil" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Montaje nocturno con velas y guirnaldas" },
+      { src: "/img/mesa-picnic-boda-elegante-decoracion.webp", alt: "Boda íntima con banca decorada entre árboles maduros" },
+    ]}
+    recommended={[
+      { title: "Mesa Rústica", description: "Acabado campestre, 8 personas", href: "/catalogo/mesa-picnic-rustica/" },
+      { title: "Mesa Estándar", description: "Versátil, 6-8 personas", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "Mesa principal, 10-12 personas", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Set Completo", description: "Con decoración incluida", href: "/catalogo/set-picnic-completo/" },
+      { title: "Paquete Básico", description: "4 bancas, 24 personas", href: "/paquetes/basico/" },
+      { title: "Paquete Estándar", description: "6 bancas + sombrillas", href: "/paquetes/estandar/" },
+    ]}
+    sidebarTitle="Mobiliario recomendado"
+  />
+</section>
+
+<!-- Qué hace rústico a este montaje -->
+<section class="section" id="elementos">
+  <SectionHeader
+    tag="h2"
+    title="Elementos de una Boda Rústica"
+    paragraph1="El estilo rústico no es solo poner mesas de madera — es una combinación de materiales naturales, iluminación cálida y detalles que se sienten auténticos, no forzados."
+    paragraph2="Aquí te explicamos los elementos clave que hemos visto funcionar en más de 80 bodas rústicas que montamos el último año."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Madera sin Pintar" description="El pino natural lijado y barnizado tiene vetas visibles, nudos y variaciones de tono que le dan personalidad a cada banca. Eso es lo que busca el estilo rústico." />
+      <FeatureCard title="Flores Silvestres y Eucalipto" description="Caminos de eucalipto, lavanda o flores silvestres sobre la madera. Sin arreglos formales ni floreros altos. Todo se ve como si creciera ahí naturalmente." />
+      <FeatureCard title="Velas y Luces Cálidas" description="Series de luces tipo bulbo o guirnaldas de focos cálidos cruzando sobre las bancas. Velas en portavelas de vidrio o latón repartidas por la mesa. Sin neones ni luces frías." />
+      <FeatureCard title="Textiles Naturales" description="Caminos de yute, servilletas de lino crudo, cojines de algodón sobre las bancas. Colores tierra: beige, crema, verde olivo, terracota. Nada sintético." />
+    </div>
+  </div>
+</section>
+
+<!-- Venues ideales -->
+<section class="section section-alt" id="venues">
+  <SectionHeader
+    tag="h2"
+    title="Venues Ideales para Boda Rústica"
+    paragraph1="No todos los espacios funcionan igual para una boda rústica. Estos son los tipos de venue donde el mobiliario de madera natural se ve mejor y hemos tenido los mejores resultados."
+    paragraph2="Si ya tienes tu venue, mándanos fotos del espacio por WhatsApp y te decimos cómo distribuir las bancas."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <FeatureCard title="Jardines con Pasto" description="El contraste de la madera sobre pasto verde es la combinación clásica. Funciona para ceremonias de 20 a 200 personas. Los jardines privados de Coyoacán y Tlalpan son los más populares." />
+      <FeatureCard title="Haciendas y Fincas" description="Arcos de piedra, muros antiguos y pasillos empedrados complementan la madera natural. Haciendas en Tepotzotlán, Cuautitlán y el corredor Naucalpan-Huixquilucan son ideales." />
+      <FeatureCard title="Viñedos y Bosques" description="Para bodas íntimas de 20-50 personas. Las bancas entre árboles o hileras de vid crean ambientes que no se logran con mobiliario convencional." />
+      <FeatureCard title="Terrazas y Azoteas" description="Rooftops con macetas y vegetación en Polanco, Roma o Condesa. La madera suaviza el ambiente urbano y aporta calidez al espacio abierto." />
+    </div>
+  </div>
+</section>
+
+<!-- Mobiliario recomendado -->
+<section class="section" id="mobiliario">
+  <SectionHeader
+    tag="h2"
+    title="Mobiliario Recomendado"
+    paragraph1="Para una boda rústica recomendamos combinar estos modelos según el tamaño de tu evento y la distribución del espacio."
+    paragraph2="Todos los modelos tienen el mismo acabado de pino natural. La diferencia está en las dimensiones y la capacidad."
+  />
+  <div class="container">
+    <div class="grid-4">
+      <ServiceCard title="Mesa Rústica" description="Acabado natural campestre, ideal para el estilo rústico. 8 personas por banca. La favorita para bodas en haciendas y jardines." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-rustica/" btnLabel="Ficha técnica rústica" />
+      <ServiceCard title="Mesa Estándar" description="La más versátil. 6-8 personas, 1.80 × 1.50 m. Funciona para el banquete principal y las mesas de invitados." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Ficha técnica estándar" />
+      <ServiceCard title="Mesa Grande" description="Para mesas largas tipo banquete. 10-12 personas, 2.40 × 1.50 m. Ideal para la mesa principal de los novios." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Ficha técnica grande" />
+      <ServiceCard title="Set Completo" description="Mesa + decoración básica + menaje incluido. Si no quieres coordinar decoración por separado, este set tiene lo necesario." image="/img/mesa-picnic-boda-elegante-decoracion.webp" href="/catalogo/set-picnic-completo/" btnLabel="Ficha técnica set" />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ boda rústica -->
+<section class="section section-alt" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre Bodas Rústicas"
+    paragraph1="Dudas específicas que recibimos de parejas que están planeando una boda con estilo rústico o campestre."
+    paragraph2="Si necesitas asesoría sobre cómo lograr el estilo rústico en tu venue, escríbenos y te orientamos."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Necesito manteles para una boda rústica?", answer: "No. Ese es el punto del estilo rústico — la madera al natural es el elemento decorativo. Puedes agregar caminos de yute o tela, pero no es necesario cubrir la mesa. La superficie barnizada es lisa y segura para vajilla." },
+      { question: "¿La madera se ve bien en fotos?", answer: "Sí, la textura y el tono del pino natural fotografían muy bien, especialmente con luz natural o iluminación cálida. Tenemos fotos de referencia de bodas reales que podemos mandarte por WhatsApp." },
+      { question: "¿Puedo combinar mesas de diferentes tamaños?", answer: "Sí, es común combinar mesas estándar para invitados con una mesa grande como mesa principal de los novios. También puedes mezclar con el set completo si quieres una mesa ya decorada." },
+      { question: "¿Cuánto espacio necesita cada banca?", answer: "Cada mesa estándar ocupa 1.80 × 1.50 m más 60 cm de circulación a cada lado. Para 100 invitados en mesas estándar necesitas un área de aproximadamente 120 m²." },
+      { question: "¿Funcionan en haciendas con piso empedrado?", answer: "Sí. Las bancas son estables sobre empedrado, pasto, tierra y concreto. Si el terreno es muy irregular, nivelamos con cuñas de madera que traemos incluidas." },
+      { question: "¿Incluyen decoración rústica?", answer: "El mobiliario se entrega sin decoración, listo para que tú o tu decoradora lo personalicen. Si prefieres un servicio con decoración incluida, consulta nuestro Set Completo que trae menaje y ambientación básica." }
+    ]}
+  />
+</section>
+
+<!-- CTA Final -->
+<CtaBarFinal
+  headline="¿Planeando una boda rústica?"
+  subtext="Cotiza tu mobiliario de madera. Te asesoramos con la distribución."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, quiero cotizar mesas de madera para una boda rústica."
+  cotizarHref="/cotizar/"
+/>
+
+<!-- WhatsApp Bubble -->
+<WaBubble whatsapp="5531281706" message="Hola, quiero cotizar mesas de madera para una boda rústica." />
+
+<!-- Schema -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Renta de Mesas para Bodas Rústicas",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad de México" },
+      { "@type": "State", "name": "Estado de México" }
+    ],
+    "description": "Renta de bancas de madera de pino natural para bodas rústicas al aire libre en CDMX y Edomex."
+  })} />
+</Fragment>
+
+</BaseLayout>
+
+<style>
+  :global(.hero) {
+    padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem);
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+</style>

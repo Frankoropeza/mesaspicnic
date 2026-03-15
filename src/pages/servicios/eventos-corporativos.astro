@@ -1,159 +1,215 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Hero from '../../components/Hero.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import CtaBarFinal from '../../components/CtaBarFinal.astro';
+import WaBubble from '../../components/WaBubble.astro';
 import GallerySection from '../../components/GallerySection.astro';
 
 const galeriaImages = [
-  { src: "/img/corp-rooftop-1.avif", alt: "Evento corporativo en terraza con bancas de madera y vista panorámica de la ciudad" },
-  { src: "/img/corp-teambuilding-1.avif", alt: "Equipo de trabajo compartiendo actividad de integración en mesas de madera al aire libre" },
-  { src: "/img/corp-almuerzo-1.avif", alt: "Almuerzo empresarial servido sobre mobiliario rústico en jardín corporativo" },
-  { src: "/img/mesa-picnic-conferencia-empresarial-plantas.webp", alt: "Conferencia empresarial al aire libre rodeada de plantas" },
-  { src: "/img/mesa-picnic-evento-empresarial-exterior.webp", alt: "Montaje de bancas de madera en exterior para evento de empresa" },
-  { src: "/img/mesa-picnic-evento-corporativo-04.webp", alt: "Vista general de un evento corporativo con mobiliario de madera" },
-  { src: "/img/mesa-picnic-evento-masivo-dia.webp", alt: "Evento masivo de día con decenas de bancas ocupadas por asistentes" },
+  { src: "/img/corp-rooftop-1.avif", alt: "Mesas de madera en terraza corporativa con vista al skyline de Ciudad de México" },
+  { src: "/img/corp-teambuilding-1.avif", alt: "Bancas picnic en parque verde para actividad de team building empresarial" },
+  { src: "/img/corp-almuerzo-1.avif", alt: "Almuerzo ejecutivo al aire libre con mesas de madera en campus corporativo" },
+  { src: "/img/mesa-picnic-seminario-corporativo.webp", alt: "Mobiliario de madera preparado para seminario corporativo al aire libre" },
+  { src: "/img/mesa-picnic-evento-masivo-dia.webp", alt: "Evento corporativo masivo con múltiples bancas de madera en explanada" },
+  { src: "/img/mesa-picnic-conferencia-empresarial-plantas.webp", alt: "Conferencia empresarial en espacio exterior con mesas de pino natural" },
+  { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Espacio de networking corporativo con bancas de madera" },
 ];
 ---
 
 <BaseLayout
-  title="Renta de Mesas Picnic para Eventos Corporativos | MESPIC"
-  description="Alquiler de mobiliario de madera para eventos corporativos, team buildings y comidas empresariales en CDMX. Entrega, montaje y recolección incluidos."
+  title="Mesas Picnic para Eventos Corporativos en CDMX | MESPIC"
+  description="Renta de mobiliario de madera para team buildings, conferencias, comidas empresariales y activaciones de marca. Facturamos CFDI. Entrega y montaje en CDMX y Edomex."
 >
 
+<!-- Breadcrumbs -->
+<Fragment slot="breadcrumbs">
+  <Breadcrumbs items={[
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios/" },
+    { label: "Eventos Corporativos" }
+  ]} />
+</Fragment>
+
+<!-- Hero -->
 <Hero
+  badge="Servicio corporativo"
   title="Mobiliario de Madera para Eventos Corporativos"
-  description="Bancas y mesas picnic para team buildings, conferencias al aire libre, comidas empresariales y activaciones de marca. De 10 a 500+ personas, con logística completa."
-  ctaPrimary={{ label: "Cotizar para mi empresa →", href: "/cotizar/" }}
-  ctaSecondary={{ label: "Ver galería", href: "#galeria-corporativo" }}
-  seoParagraph1="Llevamos más de 5 años montando eventos corporativos con mobiliario de madera: team buildings en parques, conferencias en jardines y comidas de integración donde cada banca sienta de 6 a 8 personas cómodamente. Coordinamos directo con tu equipo de logística para que el montaje esté listo antes de que llegue el primer invitado."
-  seoParagraph2="Facturamos (CFDI), manejamos flotillas propias de transporte y cubrimos eventos desde 10 hasta 500+ asistentes en CDMX y zona metropolitana. Tú defines horario y ubicación; nosotros resolvemos entrega, acomodo y recolección."
+  description="Bancas y mesas para team buildings, conferencias al aire libre, comidas de integración y activaciones de marca. De 10 a 500+ asistentes con factura CFDI."
+  ctaPrimary={{ label: "Ver catálogo de mesas →", href: "/catalogo/" }}
+  ctaSecondary={{ label: "Ver paquetes", href: "/paquetes/" }}
+  seoParagraph1="Desde 2017, MESPIC trabaja con empresas en la Ciudad de México y zona metropolitana montando mobiliario para eventos corporativos al aire libre. Team buildings en parques, conferencias en jardines, comidas de cierre anual y activaciones de marca en espacios abiertos. Cada banca sienta de 6 a 8 personas frente a frente, lo que rompe jerarquías y facilita la conversación entre áreas."
+  seoParagraph2="Facturamos CFDI con los datos fiscales que tu empresa necesite. Manejamos flotilla propia de transporte y coordinamos directamente con tu equipo de logística o agencia de eventos. Entrega, montaje según plano y recolección incluidos en el precio."
 />
 
-<section class="section">
+<!-- Galería + Sidebar -->
+<section class="section" id="montajes">
+  <SectionHeader
+    tag="h2"
+    title="Así se Ve en Eventos de Empresa"
+    paragraph1="Montajes de mobiliario de madera en team buildings, conferencias y comidas corporativas. Terrazas, jardines, parques y espacios abiertos en la Ciudad de México."
+    paragraph2="Explora los modelos recomendados en la barra lateral para cotizar según tu número de asistentes."
+  />
+  <ProductGallery
+    images={[
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Grupo de empleados en team building con bancas de madera al aire libre" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Conferencia empresarial en jardín con bancas como estaciones de trabajo" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Comida de integración con 20 bancas en terraza corporativa" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Activación de marca al aire libre con mobiliario de pino natural" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Almuerzo empresarial servido sobre bancas de madera en jardín" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Networking corporativo en mesas de madera con vista a la ciudad" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Seminario al aire libre con laptops sobre mobiliario rústico" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Evento masivo corporativo con 30+ bancas alineadas" },
+      { src: "/img/mesa-picnic-evento-corporativo-networking.webp", alt: "Cierre anual de empresa con decoración navideña sobre madera" },
+    ]}
+    recommended={[
+      { title: "Mesa Estándar", description: "6-8 personas, la más versátil", href: "/catalogo/mesa-picnic-estandar/" },
+      { title: "Mesa Grande", description: "10-12 personas, reuniones amplias", href: "/catalogo/mesa-picnic-grande/" },
+      { title: "Paquete Estándar", description: "6 bancas, 36 personas", href: "/paquetes/estandar/" },
+      { title: "Paquete Premium", description: "10 bancas, 60 personas", href: "/paquetes/premium/" },
+      { title: "Mesa Premium", description: "Con sombrilla incluida", href: "/catalogo/mesa-picnic-premium/" },
+    ]}
+    sidebarTitle="Mobiliario para empresas"
+  />
+</section>
+
+<!-- Tipos de evento corporativo -->
+<section class="section section-alt" id="tipos">
+  <SectionHeader
+    tag="h2"
+    title="Tipos de Evento que Montamos"
+    paragraph1="No es lo mismo un team building para 30 personas que una comida de cierre anual para 300. Cada formato tiene su propia configuración de mobiliario."
+    paragraph2="Dinos qué tipo de evento estás organizando y te proponemos la distribución ideal según tu espacio y presupuesto."
+  />
   <div class="container">
-    <div class="content-split">
-      <div class="content-text">
-        <h2>Team buildings y activaciones</h2>
-        <p>El mobiliario de madera funciona perfecto para dinámicas de integración: cada banca agrupa a 6-8 personas frente a frente, lo que rompe jerarquías y facilita conversación real entre áreas que normalmente no conviven.</p>
-        <ul class="check-list">
-          <li>Dinámicas de equipo con grupos de 6-8 personas por banca</li>
-          <li>Estaciones de snacks y bebidas al aire libre</li>
-          <li>Activaciones de marca con branding sobre la madera</li>
-          <li>Zonas de networking sin filas de sillas formales</li>
-        </ul>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-evento-corporativo-networking.webp" alt="Grupo de empleados conversando alrededor de una banca de madera durante un team building" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <ServiceCard title="Team Building" description="Bancas agrupadas en estaciones de 6-8 personas para dinámicas de integración. Ideal para parques, jardines y espacios deportivos. El formato rompe la formalidad de oficina." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-estandar/" btnLabel="Mesa para team building" />
+      <ServiceCard title="Conferencias al Aire Libre" description="Bancas como estaciones de trabajo con espacio para laptop, libreta y vaso. Seminarios de hasta 120 personas en jardines corporativos. Luz natural y ventilación que mejoran la atención." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-grande/" btnLabel="Mesa para conferencias" />
+      <ServiceCard title="Comidas de Integración" description="Montaje para comidas de fin de año, celebraciones de resultados y convivios entre sucursales. De 50 a 300 personas con bancas de madera en vez de mesas redondas de hotel." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/paquetes/premium/" btnLabel="Paquete para comidas" />
+      <ServiceCard title="Activaciones de Marca" description="Mobiliario para lanzamientos de producto, ferias internas, bazares corporativos y eventos de employer branding. La madera aporta una estética natural que funciona en fotos y redes." image="/img/mesa-picnic-evento-corporativo-networking.webp" href="/catalogo/mesa-picnic-premium/" btnLabel="Mobiliario para marcas" />
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<!-- Qué incluye -->
+<section class="section" id="incluye">
+  <SectionHeader
+    tag="h2"
+    title="Qué Incluye el Servicio Corporativo"
+    paragraph1="Todo el servicio viene resuelto para que tu equipo de logística no tenga que preocuparse por el mobiliario. Coordinamos directo con tu agencia de eventos si la tienes."
+    paragraph2="Facturamos CFDI con los datos fiscales de tu empresa. Solo necesitamos RFC, razón social y uso de CFDI al momento de la cotización."
+  />
   <div class="container">
-    <div class="content-split reverse">
-      <div class="content-text">
-        <h2>Conferencias y seminarios</h2>
-        <p>Nuestras mesas picnic funcionan como estaciones de trabajo al aire libre: cada asistente tiene superficie suficiente para laptop, libreta y vaso sin estorbarse. Hemos montado seminarios de hasta 120 personas en jardines corporativos con este formato.</p>
-        <p>El cambio de escenario reduce la fatiga de sala de juntas. Tus colaboradores trabajan con luz natural y espacio abierto, lo que se nota en la participación durante talleres y mesas de discusión.</p>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-seminario-corporativo.webp" alt="Bancas de madera alineadas en un jardín con laptops y libretas para un seminario" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <FeatureCard title="Factura CFDI" description="Emitimos factura fiscal con los datos que necesite tu departamento de compras. RFC, razón social, uso de CFDI y método de pago configurables." />
+      <FeatureCard title="Montaje según Plano" description="Coordinamos con tu equipo o agencia de eventos. Llegamos 3-4 horas antes para montar según la distribución aprobada. Ajustamos en sitio si hay cambios de último momento." />
+      <FeatureCard title="Volumen para 500+ Personas" description="Tenemos inventario para eventos masivos. Para más de 200 asistentes, reserva con 2 semanas de anticipación para garantizar disponibilidad." />
+      <FeatureCard title="Contacto Directo el Día del Evento" description="Tu coordinador tiene línea directa de WhatsApp con nuestro equipo de montaje. Cualquier ajuste se resuelve en tiempo real, sin intermediarios." />
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Datos para cotizar -->
+<section class="section section-alt" id="datos">
+  <SectionHeader
+    tag="h2"
+    title="Referencia de Cantidad por Asistentes"
+    paragraph1="Usa esta tabla como referencia rápida para estimar cuántas bancas necesitas. El número final depende de la distribución del espacio y el formato del evento."
+    paragraph2="Si nos mandas el número de asistentes y las medidas del espacio, te calculamos la cantidad exacta con un plano de distribución."
+  />
   <div class="container">
-    <div class="content-split">
-      <div class="content-text">
-        <h2>Comidas empresariales</h2>
-        <p>Para comidas de fin de año o celebraciones de resultados, el montaje al aire libre con bancas de madera cambia por completo la experiencia. Tus colaboradores comen a gusto, sin la rigidez de un salón de banquetes, y el ambiente se siente más cercano.</p>
-        <ul class="check-list">
-          <li>Cenas y comidas de cierre anual para 50-300 personas</li>
-          <li>Celebraciones de resultados trimestrales</li>
-          <li>Almuerzos de bienvenida para nuevos equipos</li>
-          <li>Convivios de integración entre sucursales</li>
-        </ul>
-      </div>
-      <div class="content-image">
-        <img src="/img/mesa-picnic-comida-corporativa-empresas.webp" alt="Empleados comiendo al aire libre en bancas de madera durante una celebración empresarial" loading="lazy" width="600" height="400" />
-      </div>
+    <div class="grid-4">
+      <FeatureCard title="30 Personas" description="5-6 bancas estándar. Ideal para team buildings pequeños y almuerzos de equipo. Cabe en un jardín de 60 m²." />
+      <FeatureCard title="80 Personas" description="11-14 bancas estándar. Para conferencias medianas y comidas de área. Necesitas un espacio de aproximadamente 100 m²." />
+      <FeatureCard title="200 Personas" description="28-34 bancas estándar. Comidas de fin de año y eventos inter-sucursales. Espacio recomendado: 200+ m²." />
+      <FeatureCard title="500+ Personas" description="70+ bancas. Eventos masivos, festivales corporativos y activaciones de marca. Requiere reserva anticipada de 2 semanas mínimo." />
     </div>
   </div>
 </section>
 
-<GallerySection
-  title="Galería Corporativa"
-  subtitle="Montajes reales que hemos realizado para empresas en la zona metropolitana."
-  images={galeriaImages}
-  id="galeria-corporativo"
+<!-- Galería corporativa -->
+<section class="section" id="galeria-corporativo">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:0.5rem;">Eventos Corporativos con Nuestro Mobiliario</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem;">Team buildings, almuerzos ejecutivos y conferencias al aire libre en CDMX y Edomex.</p>
+  </div>
+  <GallerySection images={galeriaImages} id="galeria" />
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <SectionHeader
+    tag="h2"
+    title="Preguntas sobre Eventos Corporativos"
+    paragraph1="Las dudas más comunes que recibimos de departamentos de logística, agencias de eventos y coordinadores de recursos humanos."
+    paragraph2="Si necesitas una cotización formal para presentar a tu empresa, escríbenos y te la enviamos por correo."
+  />
+  <FaqSection
+    phone="55 3128 1706"
+    whatsapp="5531281706"
+    schedule="Lun–Dom 8:00–20:00"
+    items={[
+      { question: "¿Emiten factura fiscal?", answer: "Sí, emitimos CFDI con los datos fiscales de tu empresa. Solicítala al momento de la cotización con RFC, razón social y uso de CFDI." },
+      { question: "¿Cuántas bancas para 200 personas?", answer: "Entre 28 y 34 bancas estándar (6-8 personas cada una), dependiendo de la distribución. Te enviamos un plano de distribución si nos mandas las medidas del espacio." },
+      { question: "¿Entregan en oficinas y parques corporativos?", answer: "Sí, entregamos en oficinas con área exterior, parques corporativos, jardines, terrazas, centros de convenciones y cualquier espacio con acceso vehicular en CDMX y Edomex." },
+      { question: "¿Pueden coordinarse con nuestra agencia de eventos?", answer: "Sí, trabajamos directamente con agencias, wedding planners y coordinadores de logística. Les enviamos medidas del mobiliario y coordinamos tiempos de montaje." },
+      { question: "¿Tienen disponibilidad entre semana?", answer: "Sí, operamos los 7 días. Los eventos corporativos generalmente son entre semana y tenemos más disponibilidad que los fines de semana." },
+      { question: "¿Qué formas de pago aceptan?", answer: "Transferencia bancaria, depósito en efectivo y pago con tarjeta. Para empresas, aceptamos orden de compra con pago a 15 días contra factura." }
+    ]}
+  />
+</section>
+
+<!-- CTA Final -->
+<CtaBarFinal
+  headline="¿Organizando un evento de empresa?"
+  subtext="Cotiza con factura CFDI. Te respondemos el mismo día."
+  phone="55 3128 1706"
+  whatsapp="5531281706"
+  waMessage="Hola, necesito cotizar mobiliario para un evento corporativo."
+  cotizarHref="/cotizar/"
 />
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Preguntas sobre Eventos Corporativos</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary class="faq-question">¿Emiten factura?</summary>
-        <div class="faq-answer"><p>Sí, emitimos factura fiscal (CFDI) con todos los datos que tu empresa necesite. Solicítala al momento de tu cotización.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">¿Cuántas mesas necesito para un evento de 200 personas?</summary>
-        <div class="faq-answer"><p>Cada banca sienta entre 6 y 8 personas, así que para 200 asistentes necesitas entre 25 y 34 unidades según la distribución del espacio. Nosotros te ayudamos a planificar el layout antes del evento.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-question">¿Pueden entregar en oficinas o parques corporativos?</summary>
-        <div class="faq-answer"><p>Sí, entregamos en oficinas, parques, jardines, terrazas y centros de convenciones en toda la zona metropolitana del Valle de México.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
+<!-- WA Bubble -->
+<WaBubble whatsapp="5531281706" message="Hola, necesito cotizar mesas para un evento corporativo." />
 
-<section class="cta-final">
-  <div class="container cta-final-inner">
-    <h2 class="cta-final-title">Impulsa tu próximo evento corporativo</h2>
-    <p class="cta-final-desc">Escríbenos por WhatsApp con la fecha, ubicación y número de asistentes. Te respondemos con cotización el mismo día.</p>
-    <a href="https://wa.me/5215512345678?text=Hola%2C%20necesito%20cotizar%20mesas%20picnic%20para%20un%20evento%20corporativo" class="btn btn-wa" target="_blank" rel="noopener">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Cotizar para mi empresa
-    </a>
-  </div>
-</section>
+<!-- Schema -->
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Renta de Mesas Picnic para Eventos Corporativos",
+    "provider": { "@type": "LocalBusiness", "name": "MESPIC", "telephone": "+52-55-3128-1706" },
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad de México" },
+      { "@type": "State", "name": "Estado de México" }
+    ],
+    "description": "Renta de mobiliario de madera para team buildings, conferencias, comidas empresariales y activaciones de marca en CDMX y Edomex. Facturamos CFDI."
+  })} />
+</Fragment>
 
 </BaseLayout>
 
 <style>
-  .content-split {
+  :global(.hero) {
+    padding-top: calc(var(--topbar-height, 36px) + var(--header-height, 70px) + 2.5rem + 3rem);
+  }
+
+  .grid-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
-  .content-split.reverse .content-text { order: 2; }
-  .content-split.reverse .content-image { order: 1; }
-  .content-text h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--c-primary); margin-bottom: 1rem; }
-  .content-text p { color: var(--c-text-muted); line-height: 1.7; margin-bottom: 1rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
-  .check-list li { padding-left: 1.75rem; position: relative; color: var(--c-text); line-height: 1.6; }
-  .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--c-primary); font-weight: 700; }
-  .content-image img { border-radius: var(--radius-md); width: 100%; height: auto; }
-  .faq-list { max-width: 720px; margin: 1rem auto 0; display: flex; flex-direction: column; gap: 0.75rem; }
-  .faq-item { background: #fff; border: 1px solid var(--c-border); border-radius: var(--radius-sm); overflow: hidden; }
-  .faq-question { padding: 1.25rem 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  .faq-question::-webkit-details-marker { display: none; }
-  .faq-question::after { content: '+'; font-size: 1.25rem; font-weight: 300; color: var(--c-accent); flex-shrink: 0; margin-left: 1rem; }
-  .faq-item[open] .faq-question::after { content: '−'; }
-  .faq-item[open] .faq-question { background: var(--c-bg-alt); }
-  .faq-answer { padding: 0 1.5rem 1.25rem; color: var(--c-text-muted); line-height: 1.7; }
-  .cta-final { background: var(--c-primary); padding: 5rem 0; }
-  .cta-final-inner { text-align: center; }
-  .cta-final-title { color: #fff; font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
-  .cta-final-desc { color: rgba(255,255,255,0.8); font-size: 1.125rem; margin-bottom: 2rem; }
-  @media (max-width: 768px) {
-    .content-split { grid-template-columns: 1fr; gap: 2rem; }
-    .content-split.reverse .content-text, .content-split.reverse .content-image { order: unset; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  @media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+  @media (max-width: 640px) {
+    .grid-4 { grid-template-columns: 1fr; }
+  }
 </style>

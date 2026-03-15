@@ -1,5 +1,15 @@
 ---
+/**
+ * Hero Component — OrigenLab Standard v2
+ * ───────────────────────────────────────
+ * 2 columnas obligatorias:
+ *   Col 1: Badge + H1 + descripción + CTAs
+ *   Col 2: 2 párrafos SEO (SOLO TEXTO, sin imágenes)
+ * Diseño moderno: tipografía fluida, gradientes suaves,
+ * decoración sutil, microinteracciones.
+ */
 interface Props {
+  badge?: string;
   title: string;
   description: string;
   ctaPrimary?: { label: string; href: string };
@@ -9,6 +19,7 @@ interface Props {
 }
 
 const {
+  badge = "Renta de Mobiliario",
   title,
   description,
   ctaPrimary = { label: "Cotizar ahora →", href: "/cotizar/" },
@@ -18,82 +29,184 @@ const {
 } = Astro.props;
 ---
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-col1">
-      <h1 class="hero-title">{title}</h1>
-      <p class="hero-desc">{description}</p>
-      <div class="hero-ctas">
-        <a href={ctaPrimary.href} class="btn btn-primary">{ctaPrimary.label}</a>
-        <a href={ctaSecondary.href} class="btn btn-outline">{ctaSecondary.label}</a>
+<section class="hero" aria-label="Sección principal">
+  <div class="container hero__grid">
+    <!-- ═══ COLUMNA 1: Título + CTAs ═══ -->
+    <div class="hero__col1">
+      {badge && (
+        <span class="hero__badge">
+          {badge}
+        </span>
+      )}
+
+      <h1 class="hero__title">{title}</h1>
+
+      <p class="hero__desc">{description}</p>
+
+      <div class="hero__ctas">
+        <a href={ctaPrimary.href} class="btn btn-primary hero__cta-primary">
+          {ctaPrimary.label}
+        </a>
+        <a href={ctaSecondary.href} class="btn btn-outline hero__cta-secondary">
+          {ctaSecondary.label}
+        </a>
       </div>
     </div>
-    <div class="hero-col2">
-      <p class="hero-seo">{seoParagraph1}</p>
-      <p class="hero-seo">{seoParagraph2}</p>
+
+    <!-- ═══ COLUMNA 2: Párrafos SEO (SOLO TEXTO) ═══ -->
+    <div class="hero__col2">
+      <p class="hero__seo-text">{seoParagraph1}</p>
+      <p class="hero__seo-text">{seoParagraph2}</p>
     </div>
   </div>
 </section>
 
 <style>
+  /* ══════════════════════════════════════
+     Hero — Layout
+     ══════════════════════════════════════ */
   .hero {
-    padding-top: calc(var(--header-height, 70px) + 4rem);
-    padding-bottom: 4rem;
-    background: var(--c-bg-alt, #FAF8F5);
+    padding-top: calc(var(--topbar-height, 0px) + var(--header-height, 70px) + 5rem);
+    padding-bottom: 5rem;
+    background: var(--c-bg-hero, #F2EDE7);
   }
 
-  .hero-grid {
+  .hero__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    color: var(--c-primary, #2D5016);
-    margin-bottom: 1rem;
-    line-height: 1.1;
-  }
-
-  .hero-desc {
-    font-size: 1.125rem;
-    color: var(--c-text-muted, #6b7280);
-    margin-bottom: 2rem;
-    line-height: 1.7;
-  }
-
-  .hero-ctas {
+  /* ══════════════════════════════════════
+     Columna 1 — Título + CTAs
+     ══════════════════════════════════════ */
+  .hero__col1 {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--c-primary);
+    background: rgba(44, 85, 48, 0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .hero__title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    color: var(--c-primary-dark, #1B3B20);
+    margin-bottom: 1.25rem;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    max-width: 520px;
+  }
+
+  .hero__desc {
+    font-size: 1.0625rem;
+    color: var(--c-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: 0.875rem;
     flex-wrap: wrap;
   }
 
-  .hero-col2 {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .hero__cta-primary {
+    padding: 1rem 2.25rem;
+    font-size: 1rem;
   }
 
-  .hero-seo {
+  .hero__cta-secondary {
+    padding: 1rem 2rem;
     font-size: 1rem;
-    color: var(--c-text, #1a1a1a);
-    line-height: 1.8;
-    padding: 1.5rem;
-    background: #fff;
+  }
+
+  /* ══════════════════════════════════════
+     Columna 2 — Párrafos SEO
+     ══════════════════════════════════════ */
+  .hero__col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero__seo-text {
+    font-size: 0.9375rem;
+    color: var(--c-text);
+    line-height: 1.75;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem 1.75rem;
     border-radius: var(--radius-md, 12px);
-    border-left: 4px solid var(--c-accent, #D4A574);
+  }
+
+  /* ══════════════════════════════════════
+     Responsive
+     ══════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .hero__grid {
+      gap: 3rem;
+    }
+
+    .hero__title {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+    }
   }
 
   @media (max-width: 768px) {
     .hero {
-      padding-top: calc(var(--header-height, 70px) + 2rem);
-      padding-bottom: 2.5rem;
+      padding-top: calc(var(--topbar-height, 0px) + var(--header-height, 70px) + 3rem);
+      padding-bottom: 3rem;
     }
 
-    .hero-grid {
+    .hero__grid {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
+    }
+
+    .hero__title {
+      max-width: none;
+    }
+
+    .hero__desc {
+      max-width: none;
+    }
+
+    .hero__ctas {
+      flex-direction: column;
+    }
+
+    .hero__cta-primary,
+    .hero__cta-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .hero__seo-text {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__badge {
+      font-size: 0.75rem;
+    }
+
+    .hero__seo-text {
+      font-size: 0.875rem;
     }
   }
 </style>
