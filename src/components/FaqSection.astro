@@ -85,32 +85,12 @@ const waHref = `https://wa.me/${whatsapp}?text=${encodeURIComponent(waMessage)}`
 
 <script is:inline>
   document.getElementById('openDmchampChat').addEventListener('click', function() {
-    // Try to open the DMChamp Chat Widget
-    var opened = false;
-    // Attempt 1: look for the widget's launcher button
-    var selectors = [
-      '[id*="dmchamp"]', '[class*="dmchamp"]',
-      '[id*="chat-widget"]', '[class*="chat-widget"]',
-      '[id*="chat_widget"]', '[class*="chat_widget"]'
-    ];
-    for (var i = 0; i < selectors.length; i++) {
-      var el = document.querySelector(selectors[i]);
-      if (el && el !== document.getElementById('openDmchampChat')) {
-        el.click();
-        opened = true;
-        break;
-      }
-    }
-    // Attempt 2: look inside iframes
-    if (!opened) {
-      var iframes = document.querySelectorAll('iframe');
-      if (iframes.length > 0) {
-        iframes[iframes.length - 1].click();
-        opened = true;
-      }
-    }
-    // Fallback: open WhatsApp
-    if (!opened) {
+    // El widget DMChamp usa la clase .wai-chat-bubble como botón de apertura
+    var bubble = document.querySelector('.wai-chat-bubble');
+    if (bubble) {
+      bubble.click();
+    } else {
+      // Fallback: abrir WhatsApp directo
       window.open('https://wa.me/5531281706?text=Hola%2C+vine+del+sitio+mesaspicnic.com+y+tengo+una+duda.', '_blank');
     }
   });
